@@ -1,0 +1,3251 @@
+{
+  "project": "Cognify",
+  "version": "1.0",
+  "generated_for": "question_bank_seed_pack",
+  "total_questions": 100,
+  "notes": [
+    "All questions are original and written for internal testing / seed-data use.",
+    "Items with status=needs_visual include Bolt instructions for generating the required chart, table, or diagram.",
+    "Math items 1-39 are text-only multiple choice. Challenge items C001-C011 are visual/data interpretation items."
+  ],
+  "questions": [
+    {
+      "id": "M001",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Linear equations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Solve for x: 3x + 8 = 29.",
+      "choices": {
+        "A": 5,
+        "B": 7,
+        "C": 6,
+        "D": 8
+      },
+      "answer": "B",
+      "explanation": "Substract 8 from both sides to get 3x = 21, then divide by 3.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "linear_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M002",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Linear equations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Solve for y: 5y - 12 = 38.",
+      "choices": {
+        "A": 8,
+        "B": 10,
+        "C": 9,
+        "D": 11
+      },
+      "answer": "B",
+      "explanation": "Add 12 to both sides to get 5y = 50, then divide by 5.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "linear_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M003",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Systems of equations",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "If 2x + y = 11 and x - y = 1, what is the value of x?",
+      "choices": {
+        "A": 3,
+        "B": 4,
+        "C": 5,
+        "D": 6
+      },
+      "answer": "B",
+      "explanation": "Adding the equations gives 3x = 12, so x = 4.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "systems_of_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M004",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Ratios and proportions",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A store sells 4 notebooks for $7.20. At the same rate, what is the cost of 10 notebooks?",
+      "choices": {
+        "A": 16,
+        "B": 18,
+        "C": 17,
+        "D": 19
+      },
+      "answer": "B",
+      "explanation": "The unit price is $1.80 per notebook, and 10 × 1.80 = 18.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "ratios_and_proportions"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M005",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Percent change",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A jacket that costs $80 is increased by 15%. What is the new price?",
+      "choices": {
+        "A": 88,
+        "B": 92,
+        "C": 90,
+        "D": 96
+      },
+      "answer": "B",
+      "explanation": "15% of 80 is 12, so the new price is 80 + 12 = 92.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "percent_change"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M006",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Percent change",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A laptop price of $250 is decreased by 12%. What is the new price?",
+      "choices": {
+        "A": 212,
+        "B": 220,
+        "C": 218,
+        "D": 225
+      },
+      "answer": "B",
+      "explanation": "12% of 250 is 30, so the new price is 250 - 30 = 220.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "percent_change"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M007",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Slope",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the slope of the line through the points (2, 5) and (6, 13)?",
+      "choices": {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 4
+      },
+      "answer": "B",
+      "explanation": "Slope = (13 - 5) / (6 - 2) = 8 / 4 = 2.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "slope"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M008",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Function evaluation",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "If f(x) = 2x^2 - 3x + 1, what is f(4)?",
+      "choices": {
+        "A": 17,
+        "B": 21,
+        "C": 19,
+        "D": 23
+      },
+      "answer": "B",
+      "explanation": "Substitute x = 4: 2(16) - 12 + 1 = 32 - 12 + 1 = 21.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "function_evaluation"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M009",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Expression evaluation",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the value of 4(3x - 2) when x = 5?",
+      "choices": {
+        "A": 44,
+        "B": 52,
+        "C": 48,
+        "D": 56
+      },
+      "answer": "B",
+      "explanation": "First compute 3x - 2 = 13, then multiply by 4 to get 52.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "expression_evaluation"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M010",
+      "section": "Math",
+      "domain": "advanced_math",
+      "skill": "Factoring",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Factor the expression x^2 + 7x + 10.",
+      "choices": {
+        "A": "(x + 10)(x - 1)",
+        "B": " (x + 5)(x + 2)",
+        "C": "(x + 1)(x + 10)",
+        "D": "(x - 5)(x - 2)"
+      },
+      "answer": "B",
+      "explanation": "Find two numbers that multiply to 10 and add to 7: 5 and 2.",
+      "tags": [
+        "sat",
+        "math",
+        "advanced_math",
+        "factoring"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M011",
+      "section": "Math",
+      "domain": "advanced_math",
+      "skill": "Quadratics",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Solve x^2 - 9x + 20 = 0. What is one solution?",
+      "choices": {
+        "A": 4,
+        "B": 5,
+        "C": 6,
+        "D": 7
+      },
+      "answer": "B",
+      "explanation": "The quadratic factors as (x - 5)(x - 4) = 0, so one solution is 5.",
+      "tags": [
+        "sat",
+        "math",
+        "advanced_math",
+        "quadratics"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M012",
+      "section": "Math",
+      "domain": "geometry",
+      "skill": "Area of triangles",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A triangle has a base of 12 and a height of 9. What is its area?",
+      "choices": {
+        "A": 48,
+        "B": 54,
+        "C": 60,
+        "D": 72
+      },
+      "answer": "B",
+      "explanation": "Use A = 1/2 bh: 1/2 × 12 × 9 = 54.",
+      "tags": [
+        "sat",
+        "math",
+        "geometry",
+        "area_of_triangles"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M013",
+      "section": "Math",
+      "domain": "geometry",
+      "skill": "Perimeter",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "A rectangle has a perimeter of 34 and a length of 10. What is its width?",
+      "choices": {
+        "A": 6,
+        "B": 7,
+        "C": 8,
+        "D": 9
+      },
+      "answer": "B",
+      "explanation": "2L + 2W = 34, so 20 + 2W = 34 and 2W = 14, giving W = 7.",
+      "tags": [
+        "sat",
+        "math",
+        "geometry",
+        "perimeter"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M014",
+      "section": "Math",
+      "domain": "geometry",
+      "skill": "Circles",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A circle has radius 6. What is its circumference in terms of pi?",
+      "choices": {
+        "A": "6π",
+        "B": "12π",
+        "C": "18π",
+        "D": "24π"
+      },
+      "answer": "B",
+      "explanation": "Circumference is 2πr, so 2π(6) = 12π.",
+      "tags": [
+        "sat",
+        "math",
+        "geometry",
+        "circles"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M015",
+      "section": "Math",
+      "domain": "geometry",
+      "skill": "Angle sums",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Two angles in a triangle measure 50° and 60°. What is the third angle?",
+      "choices": {
+        "A": 60,
+        "B": 70,
+        "C": 80,
+        "D": 90
+      },
+      "answer": "B",
+      "explanation": "Triangle angles sum to 180°, so 180 - 110 = 70.",
+      "tags": [
+        "sat",
+        "math",
+        "geometry",
+        "angle_sums"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M016",
+      "section": "Math",
+      "domain": "statistics",
+      "skill": "Center of data",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the median of the data set 4, 7, 8, 10, 11?",
+      "choices": {
+        "A": 7,
+        "B": 8,
+        "C": 9,
+        "D": 10
+      },
+      "answer": "B",
+      "explanation": "The middle number in the ordered set is 8.",
+      "tags": [
+        "sat",
+        "math",
+        "statistics",
+        "center_of_data"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M017",
+      "section": "Math",
+      "domain": "statistics",
+      "skill": "Probability",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A bag contains 3 red marbles and 5 blue marbles. What is the probability of drawing a red marble?",
+      "choices": {
+        "A": "5/8",
+        "B": "3/8",
+        "C": "1/3",
+        "D": "3/5"
+      },
+      "answer": "B",
+      "explanation": "There are 3 red out of 8 total marbles, so the probability is 3/8.",
+      "tags": [
+        "sat",
+        "math",
+        "statistics",
+        "probability"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M018",
+      "section": "Math",
+      "domain": "statistics",
+      "skill": "Mean",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "The numbers 6, 8, 10, 16 have a mean of what value?",
+      "choices": {
+        "A": 9,
+        "B": 10,
+        "C": 11,
+        "D": 12
+      },
+      "answer": "B",
+      "explanation": "Add the numbers to get 40, then divide by 4 to get 10.",
+      "tags": [
+        "sat",
+        "math",
+        "statistics",
+        "mean"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M019",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Rate of change",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If a function increases by 4 every time x increases by 1, what is its rate of change?",
+      "choices": {
+        "A": 1,
+        "B": 4,
+        "C": 2,
+        "D": 8
+      },
+      "answer": "B",
+      "explanation": "Rate of change is the same as the increase per 1 unit of x.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "rate_of_change"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M020",
+      "section": "Math",
+      "domain": "advanced_math",
+      "skill": "Absolute value equations",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Solve for x: |x - 3| = 5. What is one possible value of x?",
+      "choices": {
+        "A": 2,
+        "B": 8,
+        "C": 3,
+        "D": 5
+      },
+      "answer": "B",
+      "explanation": "One case is x - 3 = 5, which gives x = 8. (The other solution is -2.)",
+      "tags": [
+        "sat",
+        "math",
+        "advanced_math",
+        "absolute_value_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M021",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Function evaluation",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If g(x) = x/2 + 7, what is g(10)?",
+      "choices": {
+        "A": 10,
+        "B": 12,
+        "C": 14,
+        "D": 17
+      },
+      "answer": "B",
+      "explanation": "Substitute x = 10: 10/2 + 7 = 5 + 7 = 12.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "function_evaluation"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M022",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Unit rate",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A car travels 180 miles in 3 hours at a constant speed. How many miles does it travel in 5 hours?",
+      "choices": {
+        "A": 270,
+        "B": 300,
+        "C": 280,
+        "D": 320
+      },
+      "answer": "B",
+      "explanation": "The speed is 60 mph, so 5 hours × 60 = 300 miles.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "unit_rate"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M023",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Solving equations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If 3x = 2y and y = 12, what is x?",
+      "choices": {
+        "A": 6,
+        "B": 8,
+        "C": 10,
+        "D": 12
+      },
+      "answer": "B",
+      "explanation": "Substitute y = 12: 3x = 24, so x = 8.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "solving_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M024",
+      "section": "Math",
+      "domain": "advanced_math",
+      "skill": "Exponents",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the value of 2^3 × 2^4?",
+      "choices": {
+        "A": 64,
+        "B": 128,
+        "C": 256,
+        "D": 32
+      },
+      "answer": "B",
+      "explanation": "When multiplying powers with the same base, add exponents: 2^7 = 128.",
+      "tags": [
+        "sat",
+        "math",
+        "advanced_math",
+        "exponents"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M025",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Linear functions",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If the line y = 3x + 1 crosses the y-axis, what is the y-intercept?",
+      "choices": {
+        "A": 3,
+        "B": 1,
+        "C": -1,
+        "D": 0
+      },
+      "answer": "B",
+      "explanation": "In slope-intercept form, the y-intercept is the constant term 1.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "linear_functions"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M026",
+      "section": "Math",
+      "domain": "statistics",
+      "skill": "Interpreting data",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "A data set has values 2, 4, 6, 8, and 20. Which measure is most affected by the 20?",
+      "choices": {
+        "A": "median",
+        "B": "mean",
+        "C": "range",
+        "D": "mode"
+      },
+      "answer": "B",
+      "explanation": "The mean changes more than the median when an outlier is present.",
+      "tags": [
+        "sat",
+        "math",
+        "statistics",
+        "interpreting_data"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M027",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Expression simplification",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Which expression is equivalent to 5(x + 4) - 2x?",
+      "choices": {
+        "A": "7x + 20",
+        "B": "3x + 20",
+        "C": "3x + 4",
+        "D": "5x + 8"
+      },
+      "answer": "B",
+      "explanation": "Distribute the 5 to get 5x + 20, then subtract 2x to get 3x + 20.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "expression_simplification"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M028",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Unit rate",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A 12-ounce smoothie costs $4.80. What is the cost per ounce?",
+      "choices": {
+        "A": 0.3,
+        "B": 0.4,
+        "C": 0.5,
+        "D": 0.6
+      },
+      "answer": "B",
+      "explanation": "Divide 4.80 by 12 to get 0.40 per ounce.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "unit_rate"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M029",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Linear equations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the value of x in the equation 7x + 3 = 31?",
+      "choices": {
+        "A": 3,
+        "B": 4,
+        "C": 5,
+        "D": 6
+      },
+      "answer": "B",
+      "explanation": "Subtract 3 to get 7x = 28, then divide by 7.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "linear_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M030",
+      "section": "Math",
+      "domain": "geometry",
+      "skill": "Area of rectangles",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A garden is 9 feet by 14 feet. What is its area?",
+      "choices": {
+        "A": 46,
+        "B": 126,
+        "C": 112,
+        "D": 134
+      },
+      "answer": "B",
+      "explanation": "Area = length × width = 9 × 14 = 126.",
+      "tags": [
+        "sat",
+        "math",
+        "geometry",
+        "area_of_rectangles"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M031",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Graph interpretation",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "If the points (1, 2) and (1, 9) are on a graph, what is true about the line?",
+      "choices": {
+        "A": "It has slope 0.",
+        "B": "It is vertical.",
+        "C": "It is horizontal.",
+        "D": "Its slope is 1."
+      },
+      "answer": "B",
+      "explanation": "Both points have the same x-value, so the line is vertical.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "graph_interpretation"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M032",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Order of operations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the result of 18 ÷ 3 + 4?",
+      "choices": {
+        "A": 6,
+        "B": 10,
+        "C": 12,
+        "D": 16
+      },
+      "answer": "B",
+      "explanation": "Do division first: 18 ÷ 3 = 6, then add 4 to get 10.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "order_of_operations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M033",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Word problems",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A store buys pens for $2 each and sells them for $3.50 each. What is the profit per pen?",
+      "choices": {
+        "A": 1.0,
+        "B": 1.5,
+        "C": 1.25,
+        "D": 2.0
+      },
+      "answer": "B",
+      "explanation": "Profit is selling price minus cost: 3.50 - 2.00 = 1.50.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "word_problems"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M034",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Linear equations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If 4x - 1 = 15, what is x?",
+      "choices": {
+        "A": 3,
+        "B": 4,
+        "C": 5,
+        "D": 6
+      },
+      "answer": "B",
+      "explanation": "Add 1 to get 4x = 16, then divide by 4.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "linear_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M035",
+      "section": "Math",
+      "domain": "advanced_math",
+      "skill": "Exponent rules",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "What is the simplified form of (2x)(3x^2)?",
+      "choices": {
+        "A": "5x^3",
+        "B": "6x^3",
+        "C": "6x^2",
+        "D": "5x^2"
+      },
+      "answer": "B",
+      "explanation": "Multiply coefficients and add exponents: 2 × 3 = 6 and x^(1+2) = x^3.",
+      "tags": [
+        "sat",
+        "math",
+        "advanced_math",
+        "exponent_rules"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M036",
+      "section": "Math",
+      "domain": "statistics",
+      "skill": "Fractions",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A class has 12 girls and 8 boys. What fraction of the class are boys?",
+      "choices": {
+        "A": "3/5",
+        "B": "2/5",
+        "C": "1/2",
+        "D": "1/4"
+      },
+      "answer": "B",
+      "explanation": "There are 8 boys out of 20 students total, which simplifies to 2/5.",
+      "tags": [
+        "sat",
+        "math",
+        "statistics",
+        "fractions"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M037",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Expression evaluation",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If p = 2 and q = 6, what is p^2 + q?",
+      "choices": {
+        "A": 8,
+        "B": 10,
+        "C": 12,
+        "D": 14
+      },
+      "answer": "B",
+      "explanation": "Compute 2^2 + 6 = 4 + 6 = 10.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "expression_evaluation"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M038",
+      "section": "Math",
+      "domain": "algebra",
+      "skill": "Linear equations",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "A line has equation y = -2x + 9. What is the y-value when x = 0?",
+      "choices": {
+        "A": 0,
+        "B": 9,
+        "C": -2,
+        "D": -9
+      },
+      "answer": "B",
+      "explanation": "When x = 0, the y-intercept is 9.",
+      "tags": [
+        "sat",
+        "math",
+        "algebra",
+        "linear_equations"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "M039",
+      "section": "Math",
+      "domain": "geometry",
+      "skill": "Perimeter",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "If a square has side length 11, what is its perimeter?",
+      "choices": {
+        "A": 22,
+        "B": 44,
+        "C": 33,
+        "D": 121
+      },
+      "answer": "B",
+      "explanation": "Perimeter of a square is 4s: 4 × 11 = 44.",
+      "tags": [
+        "sat",
+        "math",
+        "geometry",
+        "perimeter"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W001",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The club met on Friday, and it discussed the plan in detail, which helped everyone understand the schedule.\"",
+      "choices": {
+        "A": "The club met on Friday; and it discussed the plan in detail, which helped everyone understand the schedule.",
+        "B": "The club met on Friday, and discussed the plan in detail which helped everyone understand the schedule.",
+        "C": "The club met on Friday and discussed the plan in detail, which helped everyone understand the schedule.",
+        "D": "The club met on Friday and it discussed the plan in detail, which helped everyone understand the schedule."
+      },
+      "answer": "C",
+      "explanation": "The sentence is clearer without the unnecessary comma after Friday, and the verbs should stay parallel.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W002",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best transition: \"The trail was steep. ___, the hikers kept going because the view at the summit was worth it.\"",
+      "choices": {
+        "A": "For example",
+        "B": "Nevertheless",
+        "C": "Similarly",
+        "D": "Meanwhile"
+      },
+      "answer": "B",
+      "explanation": "The second sentence contrasts the difficulty with the hikers' decision to continue, so 'Nevertheless' fits best.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W003",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"Each of the students brought their own notebook to the workshop.\"",
+      "choices": {
+        "A": "Each of the students brought its own notebook to the workshop.",
+        "B": "Each of the students brought their own notebooks to the workshop.",
+        "C": "Each of the students bring his or her own notebook to the workshop.",
+        "D": "Each of the students brought his or her own notebook to the workshop."
+      },
+      "answer": "D",
+      "explanation": "'Each' is singular, so the pronoun should also be singular and agree in number.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W004",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The museum was crowded, the exhibit still felt quiet and reflective.\"",
+      "choices": {
+        "A": "The museum was crowded, but the exhibit still felt quiet and reflective.",
+        "B": "The museum was crowded; the exhibit, still felt quiet and reflective.",
+        "C": "The museum was crowded and the exhibit still felt quiet and reflective.",
+        "D": "The museum was crowded. The exhibit still felt quiet and reflective."
+      },
+      "answer": "A",
+      "explanation": "The sentence needs a conjunction that shows contrast between the crowded museum and the calm exhibit.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W005",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The report was not only detailed but also it was useful.\"",
+      "choices": {
+        "A": "The report was not only detailed but also useful.",
+        "B": "The report was not only detailed, but also it was useful.",
+        "C": "The report was not only detailed but useful also it was.",
+        "D": "The report was detailed, not only but also useful."
+      },
+      "answer": "A",
+      "explanation": "The two linked ideas should stay parallel: 'detailed' and 'useful.'",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W006",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"After running three miles, the finish line finally appeared.\"",
+      "choices": {
+        "A": "After running three miles, the runner finally saw the finish line.",
+        "B": "After running three miles, the finish line finally saw the runner.",
+        "C": "The finish line finally appeared after running three miles.",
+        "D": "After running three miles, finally appeared the finish line."
+      },
+      "answer": "A",
+      "explanation": "As written, the sentence creates a confusing dangling modifier. The revised version clearly identifies who did the running.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W007",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best punctuation: \"The project required patience ___ creativity ___ and teamwork.\"",
+      "choices": {
+        "A": "patience creativity, and teamwork",
+        "B": "patience; creativity; and teamwork",
+        "C": "patience, creativity, and teamwork",
+        "D": "patience, creativity and teamwork"
+      },
+      "answer": "C",
+      "explanation": "A three-item list should use commas, including the serial comma before 'and.'",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W008",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The coach explained that the team would improve if it practiced, listened, and that it stayed focused.\"",
+      "choices": {
+        "A": "The coach explained that the team would improve if it practiced, listened, and stayed focused.",
+        "B": "The coach explained that the team would improve if it practices, listened, and stayed focused.",
+        "C": "The coach explained that the team would improve if it practiced, listened, and that staying focused.",
+        "D": "The coach explained the team would improve if it practiced, listened, and it stayed focused."
+      },
+      "answer": "A",
+      "explanation": "The items in the list should be parallel: practiced, listened, and stayed focused.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W009",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best word to complete the sentence: \"The scientist's notes were so ___ that other researchers could repeat the experiment exactly.\"",
+      "choices": {
+        "A": "vague",
+        "B": "precise",
+        "C": "brief",
+        "D": "hesitant"
+      },
+      "answer": "B",
+      "explanation": "The ability to repeat the experiment exactly depends on careful and precise notes.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W010",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"Because the app was updated, the new features were easier to find, which pleased the users.\"",
+      "choices": {
+        "A": "Because the app was updated, the new features were easier to find, and users were pleased.",
+        "B": "Because the app was updated the new features were easier to find which pleased the users.",
+        "C": "Because the app was updated, and the new features were easier to find, which pleased the users.",
+        "D": "Because the app was updated, the new features were easier to find which pleased the users and."
+      },
+      "answer": "A",
+      "explanation": "The revised version keeps the causal idea clear and removes an awkward relative clause.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W011",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The art teacher, along with her students, are preparing the display.\"",
+      "choices": {
+        "A": "The art teacher, along with her students, is preparing the display.",
+        "B": "The art teacher, along with her students, were preparing the display.",
+        "C": "The art teacher, along with her students, are prepare the display.",
+        "D": "The art teacher, along with her students, is prepare the display."
+      },
+      "answer": "A",
+      "explanation": "The subject 'teacher' is singular, so the verb should be singular too.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W012",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best transition: \"The team had limited time. ___, it completed the presentation early.\"",
+      "choices": {
+        "A": "Therefore",
+        "B": "Otherwise",
+        "C": "Likewise",
+        "D": "Still"
+      },
+      "answer": "D",
+      "explanation": "The second sentence shows an unexpected result, so 'Still' fits best.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W013",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The proposal was approved because it was clear, and it had strong evidence, and it was concise.\"",
+      "choices": {
+        "A": "The proposal was approved because it was clear and it had strong evidence and it was concise.",
+        "B": "The proposal was approved because it was clear, it had strong evidence, and concise.",
+        "C": "The proposal was approved because clear, strong evidence, and concise it was.",
+        "D": "The proposal was approved because it was clear, supported by strong evidence, and concise."
+      },
+      "answer": "D",
+      "explanation": "This revision keeps the three qualities parallel and removes repetitive phrasing.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W014",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best punctuation: \"The concert ___ which began at 7 p.m. ___ ended with a surprise encore.\"",
+      "choices": {
+        "A": "The concert, which began at 7 p.m., ended with a surprise encore.",
+        "B": "The concert which began at 7 p.m., ended with a surprise encore.",
+        "C": "The concert, which began at 7 p.m. ended with a surprise encore.",
+        "D": "The concert which began at 7 p.m. ended with a surprise encore."
+      },
+      "answer": "A",
+      "explanation": "The nonessential clause should be set off with commas on both sides.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W015",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The findings were important, they were not surprising.\"",
+      "choices": {
+        "A": "The findings were important they were not surprising.",
+        "B": "The findings were important, but they were not surprising.",
+        "C": "The findings were important; because they were not surprising.",
+        "D": "The findings were important, and because they were not surprising."
+      },
+      "answer": "B",
+      "explanation": "A coordinating conjunction is needed to join the two independent clauses.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W016",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"For the final draft, the writer removed unnecessary words in order to make it more concise and clearer.\"",
+      "choices": {
+        "A": "For the final draft, the writer removed unnecessary words to make it more concise and clear.",
+        "B": "For the final draft, the writer removed unnecessary words in order to make it more concise and clearerly.",
+        "C": "For the final draft, the writer removed unnecessary words to make it more concise and more clearer.",
+        "D": "For the final draft, the writer removed unnecessary words, making it more concise and clearer."
+      },
+      "answer": "A",
+      "explanation": "The adjectives should be parallel, so 'clear' matches 'concise' better than 'clearer.'",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W017",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"Neither the principal nor the teachers was ready for the announcement.\"",
+      "choices": {
+        "A": "Neither the principal nor the teachers was ready for the announcement.",
+        "B": "Neither the principal nor the teachers is ready for the announcement.",
+        "C": "Neither the principal nor the teachers be ready for the announcement.",
+        "D": "Neither the principal nor the teachers were ready for the announcement."
+      },
+      "answer": "D",
+      "explanation": "With 'nor,' the verb agrees with the nearer subject, which is plural 'teachers.'",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W018",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best transition: \"The experiment failed three times. ___, the team learned which variable mattered most.\"",
+      "choices": {
+        "A": "Ultimately",
+        "B": "Consequently",
+        "C": "Meanwhile",
+        "D": "In contrast"
+      },
+      "answer": "A",
+      "explanation": "The final result is a conclusion from the repeated failures, so 'Ultimately' fits best.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W019",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The cyclist wore a helmet, gloves, and he had reflective lights.\"",
+      "choices": {
+        "A": "The cyclist wore a helmet, gloves, and reflective lights.",
+        "B": "The cyclist wore a helmet, gloves, and had reflective lights.",
+        "C": "The cyclist wore a helmet, gloves, and he was reflective lights.",
+        "D": "The cyclist wore a helmet gloves, and reflective lights."
+      },
+      "answer": "A",
+      "explanation": "This keeps the items in a parallel list and removes the unnecessary pronoun.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W020",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best word to complete the sentence: \"The old bridge was built from durable materials, so it remained ___ even after many storms.\"",
+      "choices": {
+        "A": "fragile",
+        "B": "sturdy",
+        "C": "temporary",
+        "D": "uneven"
+      },
+      "answer": "B",
+      "explanation": "A bridge that survives many storms would be sturdy.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W021",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The students studied hard; therefore, they were tired, but they finished the project.\"",
+      "choices": {
+        "A": "The students studied hard; therefore, they were tired, but they finished the project.",
+        "B": "The students studied hard therefore, they were tired but they finished the project.",
+        "C": "The students studied hard; therefore they were tired, but, they finished the project.",
+        "D": "The students studied hard, therefore, they were tired; but they finished the project."
+      },
+      "answer": "A",
+      "explanation": "The original punctuation is already correct; the best choice preserves the semicolon and comma structure.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W022",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The author, who lives in Boston, write essays about city life.\"",
+      "choices": {
+        "A": "The author, who lives in Boston, write essay about city life.",
+        "B": "The author, who live in Boston, writes essays about city life.",
+        "C": "The author, who lives in Boston, writing essays about city life.",
+        "D": "The author, who lives in Boston, writes essays about city life."
+      },
+      "answer": "D",
+      "explanation": "The singular subject 'author' needs the singular verb 'writes.'",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W023",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best transition: \"The instructions were confusing. ___, the students completed the task by working together.\"",
+      "choices": {
+        "A": "Nevertheless",
+        "B": "In fact",
+        "C": "Similarly",
+        "D": "For instance"
+      },
+      "answer": "A",
+      "explanation": "The second sentence shows contrast with the first, so 'Nevertheless' works best.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W024",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The new policy, which was introduced in January, have already changed the schedule.\"",
+      "choices": {
+        "A": "The new policy, which was introduced in January, have already change the schedule.",
+        "B": "The new policy, which was introduced in January, has already changed the schedule.",
+        "C": "The new policy, which were introduced in January, has already changed the schedule.",
+        "D": "The new policy which was introduced in January, have already changed the schedule."
+      },
+      "answer": "B",
+      "explanation": "The subject 'policy' is singular, so the verb should be 'has.'",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W025",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The author wanted to show that courage is important, that honesty matters, and to be kind.\"",
+      "choices": {
+        "A": "The author wanted to show that courage is important, that honesty matters, and that kindness matters too.",
+        "B": "The author wanted to show courage is important, that honesty matters, and to be kind.",
+        "C": "The author wanted to show that courage is important, honesty matters, and to be kind.",
+        "D": "The author wanted to show that courage is important, honesty matters, and kindness."
+      },
+      "answer": "A",
+      "explanation": "The list should be parallel and each idea should have the same grammatical structure.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W026",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best punctuation: \"After the meeting ___ the manager sent a summary email.\"",
+      "choices": {
+        "A": "After the meeting; the manager sent a summary email.",
+        "B": "After the meeting, the manager sent a summary email.",
+        "C": "After the meeting the manager, sent a summary email.",
+        "D": "After the meeting: the manager sent a summary email."
+      },
+      "answer": "B",
+      "explanation": "A comma is the correct punctuation after the introductory phrase.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W027",
+      "section": "Reading and Writing",
+      "domain": "Expression of Ideas",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The device was expensive, but it was worth every penny because of its reliability and because it lasted long.\"",
+      "choices": {
+        "A": "The device was expensive, but it was worth every penny because its reliability and because it lasted long.",
+        "B": "The device was expensive, but it was worth every penny because of reliable and because it lasted long.",
+        "C": "The device was expensive, but it was worth every penny because of its reliability and long life.",
+        "D": "The device was expensive, but it was worth every penny because of its reliability and because long life."
+      },
+      "answer": "C",
+      "explanation": "This revision removes redundancy and keeps the phrase smooth and concise.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W028",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Grammar and Revision",
+      "difficulty": "Medium",
+      "format": "multiple_choice",
+      "stem": "Choose the best word to complete the sentence: \"The coach used a calm voice to ___ the players before the game.\"",
+      "choices": {
+        "A": "frustrate",
+        "B": "confuse",
+        "C": "delay",
+        "D": "reassure"
+      },
+      "answer": "D",
+      "explanation": "A calm voice would reassure the players, not frustrate or confuse them.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "usage"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W029",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Grammar and Revision",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The project succeeded because of teamwork, planning, and the fact that everyone helped each other.\"",
+      "choices": {
+        "A": "The project succeeded because of teamwork, planning, and because everyone helped each other.",
+        "B": "The project succeeded because of teamwork, planning, and mutual support.",
+        "C": "The project succeeded because of teamwork, planning, and that everyone helped each other.",
+        "D": "The project succeeded because teamwork, planning, and the fact everyone helping."
+      },
+      "answer": "B",
+      "explanation": "The revision avoids redundancy and keeps the list concise.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "grammar"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "W030",
+      "section": "Reading and Writing",
+      "domain": "Standard English Conventions",
+      "skill": "Sentence Structure",
+      "difficulty": "Easy",
+      "format": "multiple_choice",
+      "stem": "Choose the best revision: \"The librarian helped the students find books, magazines, and she also showed them how to use the catalog.\"",
+      "choices": {
+        "A": "The librarian helped the students find books and magazines and also showed them how to use the catalog.",
+        "B": "The librarian helped the students find books, magazines, and also she showed them how to use the catalog.",
+        "C": "The librarian helped the students find books and magazines, and she also showed them how to use the catalog.",
+        "D": "The librarian helped the students find books, magazines, and showed them how to use the catalog also."
+      },
+      "answer": "A",
+      "explanation": "The revision removes the awkward pronoun and keeps the list smooth.",
+      "tags": [
+        "sat",
+        "reading_writing",
+        "sentence_structure"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R001",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R1",
+      "passage": "When the old community pool was closed for repairs, a group of students started a weekend cleanup project at a nearby park. At first, they expected to spend one afternoon collecting trash and trimming weeds. Instead, neighbors began joining them with gloves, rakes, and coolers of water. By the end of the month, the project had grown into a small community tradition. The students realized that their original goal was only part of the result; the larger change was that people who rarely spoke to one another had started working side by side.",
+      "stem": "What is the main idea of the passage?",
+      "choices": {
+        "A": "The students wanted to reopen the community pool as quickly as possible.",
+        "B": "The park was already in perfect condition before the cleanup began.",
+        "C": "A small student project became a community effort that brought people together.",
+        "D": "The neighbors discouraged the students from working outside."
+      },
+      "answer": "C",
+      "explanation": "The passage focuses on how the cleanup grew into a larger community tradition.",
+      "tags": [
+        "sat",
+        "reading",
+        "r1",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R002",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R1",
+      "passage": "When the old community pool was closed for repairs, a group of students started a weekend cleanup project at a nearby park. At first, they expected to spend one afternoon collecting trash and trimming weeds. Instead, neighbors began joining them with gloves, rakes, and coolers of water. By the end of the month, the project had grown into a small community tradition. The students realized that their original goal was only part of the result; the larger change was that people who rarely spoke to one another had started working side by side.",
+      "stem": "Which detail best supports the idea that the project grew beyond the students' original plan?",
+      "choices": {
+        "A": "The students expected to spend one afternoon collecting trash and trimming weeds.",
+        "B": "Neighbors began joining them with gloves, rakes, and coolers of water.",
+        "C": "The old community pool was closed for repairs.",
+        "D": "The students worked at a nearby park."
+      },
+      "answer": "B",
+      "explanation": "This detail shows that other people joined and expanded the project.",
+      "tags": [
+        "sat",
+        "reading",
+        "r1",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R003",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R2",
+      "passage": "A city library created a 'repair shelf' for damaged books that could still be saved. Volunteers learned how to mend torn pages, replace loose covers, and label books for quick return to circulation. The project cost very little because it relied on donated materials and training from retired librarians. Some people assumed the shelf would fill slowly, but within six months, it had helped thousands of books return to readers. The library staff said the biggest benefit was not only saving money, but also showing visitors that care and patience could keep useful things in service longer.",
+      "stem": "What is the central purpose of the passage?",
+      "choices": {
+        "A": "To describe a library project that repairs books and extends their use.",
+        "B": "To explain why the library should replace all old books with new ones.",
+        "C": "To argue that libraries should stop using volunteers.",
+        "D": "To describe a contest between different city libraries."
+      },
+      "answer": "A",
+      "explanation": "The passage explains how the repair shelf works and why it matters.",
+      "tags": [
+        "sat",
+        "reading",
+        "r2",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R004",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Medium",
+      "format": "passage_based",
+      "passage_id": "R2",
+      "passage": "A city library created a 'repair shelf' for damaged books that could still be saved. Volunteers learned how to mend torn pages, replace loose covers, and label books for quick return to circulation. The project cost very little because it relied on donated materials and training from retired librarians. Some people assumed the shelf would fill slowly, but within six months, it had helped thousands of books return to readers. The library staff said the biggest benefit was not only saving money, but also showing visitors that care and patience could keep useful things in service longer.",
+      "stem": "The word 'circulation' most nearly means",
+      "choices": {
+        "A": "being stored in a museum forever.",
+        "B": "being available for people to borrow.",
+        "C": "being moved to a different city.",
+        "D": "being checked for spelling mistakes."
+      },
+      "answer": "B",
+      "explanation": "In a library, circulation means books are available to be borrowed.",
+      "tags": [
+        "sat",
+        "reading",
+        "r2",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R005",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R3",
+      "passage": "Every spring, a small town hosts a lantern walk along its river path. Local artists paint paper lanterns with scenes from the town's history, and families carry them after sunset. The event began as a simple school fundraiser, but it now draws visitors from nearby towns. Organizers say the walk matters because it gives people a reason to look carefully at the place where they live. The lanterns are temporary, but the stories attached to them help residents remember how the town changed over time.",
+      "stem": "Which statement best expresses the passage's main point?",
+      "choices": {
+        "A": "The town should stop hosting the lantern walk because it costs too much.",
+        "B": "The artists care only about painting and not about the event itself.",
+        "C": "A small event became a meaningful tradition that helps people value their town's history.",
+        "D": "The river path is dangerous and should be closed."
+      },
+      "answer": "C",
+      "explanation": "The passage emphasizes tradition, community, and historical memory.",
+      "tags": [
+        "sat",
+        "reading",
+        "r3",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R006",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R3",
+      "passage": "Every spring, a small town hosts a lantern walk along its river path. Local artists paint paper lanterns with scenes from the town's history, and families carry them after sunset. The event began as a simple school fundraiser, but it now draws visitors from nearby towns. Organizers say the walk matters because it gives people a reason to look carefully at the place where they live. The lanterns are temporary, but the stories attached to them help residents remember how the town changed over time.",
+      "stem": "Why do the organizers think the lantern walk matters?",
+      "choices": {
+        "A": "It encourages people to notice and appreciate their town.",
+        "B": "It proves that lanterns are more useful than candles.",
+        "C": "It helps the town avoid using the river path.",
+        "D": "It replaces all other festivals in nearby towns."
+      },
+      "answer": "A",
+      "explanation": "The passage says it gives people a reason to look carefully at where they live.",
+      "tags": [
+        "sat",
+        "reading",
+        "r3",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R007",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R4",
+      "passage": "In a biology class, students tested how quickly seeds sprouted in different soil mixtures. One group used soil with extra sand, another used soil rich in compost, and a third used standard potting soil. The students expected the compost mix to win immediately, but the first sprouts appeared in the potting soil. By the end of the week, however, the compost mix produced the healthiest seedlings. The teacher said the experiment showed that first results do not always tell the whole story.",
+      "stem": "What does the teacher's comment suggest?",
+      "choices": {
+        "A": "Researchers should look at results over time, not just the first outcome.",
+        "B": "The seed experiment was too simple to matter.",
+        "C": "The students should only use compost in every experiment.",
+        "D": "The first sprouts were the only important data."
+      },
+      "answer": "A",
+      "explanation": "The teacher emphasizes that later results can change the interpretation.",
+      "tags": [
+        "sat",
+        "reading",
+        "r4",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R008",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Medium",
+      "format": "passage_based",
+      "passage_id": "R4",
+      "passage": "In a biology class, students tested how quickly seeds sprouted in different soil mixtures. One group used soil with extra sand, another used soil rich in compost, and a third used standard potting soil. The students expected the compost mix to win immediately, but the first sprouts appeared in the potting soil. By the end of the week, however, the compost mix produced the healthiest seedlings. The teacher said the experiment showed that first results do not always tell the whole story.",
+      "stem": "Which detail best supports the idea that the compost mix was ultimately strongest?",
+      "choices": {
+        "A": "By the end of the week, the compost mix produced the healthiest seedlings.",
+        "B": "The first sprouts appeared in the potting soil.",
+        "C": "One group used soil with extra sand.",
+        "D": "The teacher ran the experiment in biology class."
+      },
+      "answer": "A",
+      "explanation": "This directly states the final result.",
+      "tags": [
+        "sat",
+        "reading",
+        "r4",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R009",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R5",
+      "passage": "A music teacher noticed that several students practiced only the easiest parts of their songs. To change that habit, she asked them to begin every session with the section they feared most. At first, the students complained that this made practice less fun. After a few weeks, though, they reported feeling more confident because difficult passages no longer seemed mysterious. The teacher did not argue that practice should be painless; instead, she argued that discomfort could be useful when it led to improvement.",
+      "stem": "What is the teacher's main idea?",
+      "choices": {
+        "A": "Practice should always be short and easy.",
+        "B": "Students improve when they practice the hardest parts first.",
+        "C": "Music students should avoid difficult songs.",
+        "D": "Teachers should remove all discomfort from learning."
+      },
+      "answer": "B",
+      "explanation": "The teacher believes hard practice helps students improve.",
+      "tags": [
+        "sat",
+        "reading",
+        "r5",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R010",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R5",
+      "passage": "A music teacher noticed that several students practiced only the easiest parts of their songs. To change that habit, she asked them to begin every session with the section they feared most. At first, the students complained that this made practice less fun. After a few weeks, though, they reported feeling more confident because difficult passages no longer seemed mysterious. The teacher did not argue that practice should be painless; instead, she argued that discomfort could be useful when it led to improvement.",
+      "stem": "Which phrase best shows the students' change in attitude?",
+      "choices": {
+        "A": "they complained that this made practice less fun",
+        "B": "she asked them to begin every session",
+        "C": "the section they feared most",
+        "D": "they reported feeling more confident"
+      },
+      "answer": "D",
+      "explanation": "This phrase shows the students became more confident over time.",
+      "tags": [
+        "sat",
+        "reading",
+        "r5",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R011",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R6",
+      "passage": "A neighborhood garden added a bench made from recycled wood. Some residents thought the bench was only decorative, but others soon began using it as a place to talk while waiting for volunteers to water plants. The bench became a quiet gathering spot, especially on warm evenings. Its purpose changed over time: what began as a simple object helped make the garden feel more like a shared room than a public plot of land.",
+      "stem": "The passage suggests that the bench",
+      "choices": {
+        "A": "was never used by anyone.",
+        "B": "was the most expensive part of the garden.",
+        "C": "was placed there to block the path.",
+        "D": "helped turn the garden into a more social space."
+      },
+      "answer": "D",
+      "explanation": "The bench became a gathering spot and changed the garden's atmosphere.",
+      "tags": [
+        "sat",
+        "reading",
+        "r6",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R012",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Medium",
+      "format": "passage_based",
+      "passage_id": "R6",
+      "passage": "A neighborhood garden added a bench made from recycled wood. Some residents thought the bench was only decorative, but others soon began using it as a place to talk while waiting for volunteers to water plants. The bench became a quiet gathering spot, especially on warm evenings. Its purpose changed over time: what began as a simple object helped make the garden feel more like a shared room than a public plot of land.",
+      "stem": "The word 'shared' in the passage most nearly means",
+      "choices": {
+        "A": "painted in one color.",
+        "B": "locked in a storage room.",
+        "C": "used together by many people.",
+        "D": "cut into several pieces."
+      },
+      "answer": "C",
+      "explanation": "The garden felt like a place used and enjoyed by many people.",
+      "tags": [
+        "sat",
+        "reading",
+        "r6",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R013",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R7",
+      "passage": "An engineer studying bike safety noticed that riders often overlooked small details, like loose straps and worn tires, before a trip. She designed a short checklist that could be completed in less than a minute. Riders who used the checklist reported fewer mid-ride problems and felt more prepared before leaving home. The engineer said the best safety tools are often the ones people can use so easily that they become part of a routine.",
+      "stem": "What is the main purpose of the checklist?",
+      "choices": {
+        "A": "To replace every bike repair shop.",
+        "B": "To teach riders how to race faster.",
+        "C": "To make bike rides longer.",
+        "D": "To make bike safety faster and easier to remember."
+      },
+      "answer": "D",
+      "explanation": "The checklist is short and helps riders remember basic safety steps.",
+      "tags": [
+        "sat",
+        "reading",
+        "r7",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R014",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R7",
+      "passage": "An engineer studying bike safety noticed that riders often overlooked small details, like loose straps and worn tires, before a trip. She designed a short checklist that could be completed in less than a minute. Riders who used the checklist reported fewer mid-ride problems and felt more prepared before leaving home. The engineer said the best safety tools are often the ones people can use so easily that they become part of a routine.",
+      "stem": "Which detail supports the claim that the checklist was useful?",
+      "choices": {
+        "A": "The checklist could be completed in less than a minute.",
+        "B": "The engineer studied bike safety.",
+        "C": "Riders often overlooked small details.",
+        "D": "Riders who used the checklist reported fewer mid-ride problems."
+      },
+      "answer": "D",
+      "explanation": "Fewer mid-ride problems is direct evidence of usefulness.",
+      "tags": [
+        "sat",
+        "reading",
+        "r7",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R015",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R8",
+      "passage": "At first glance, a coral reef may seem like a stone wall under the sea. In reality, it is alive with organisms that depend on one another. Tiny animals build the reef, fish hide in its crevices, and algae provide energy that helps many species survive. When any part of the system weakens, the entire reef becomes less stable. That is why scientists describe reefs as networks rather than as collections of isolated parts.",
+      "stem": "Why do scientists call reefs networks?",
+      "choices": {
+        "A": "Because reefs are made of stone and metal.",
+        "B": "Because each animal lives completely alone.",
+        "C": "Because the organisms in a reef depend on one another.",
+        "D": "Because reefs do not change over time."
+      },
+      "answer": "C",
+      "explanation": "The passage emphasizes interdependence among organisms.",
+      "tags": [
+        "sat",
+        "reading",
+        "r8",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R016",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Medium",
+      "format": "passage_based",
+      "passage_id": "R8",
+      "passage": "At first glance, a coral reef may seem like a stone wall under the sea. In reality, it is alive with organisms that depend on one another. Tiny animals build the reef, fish hide in its crevices, and algae provide energy that helps many species survive. When any part of the system weakens, the entire reef becomes less stable. That is why scientists describe reefs as networks rather than as collections of isolated parts.",
+      "stem": "The phrase 'less stable' most nearly means",
+      "choices": {
+        "A": "more colorful and bright.",
+        "B": "more expensive to study.",
+        "C": "more likely to be disrupted or damaged.",
+        "D": "more hidden from view."
+      },
+      "answer": "C",
+      "explanation": "If one part weakens, the reef can be disrupted.",
+      "tags": [
+        "sat",
+        "reading",
+        "r8",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R017",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R9",
+      "passage": "A school newspaper asked students to write about a book that changed the way they saw a subject in class. Many responses described the same feeling: the best books did not simply provide facts; they changed the reader's questions. A student who wrote about astronomy said the book helped her notice how much she did not know. Another student said a history book made him curious about the people behind the dates. The editors concluded that reading can matter most when it increases curiosity rather than ending it.",
+      "stem": "Which choice best states the main idea?",
+      "choices": {
+        "A": "School newspapers should only publish fiction reviews.",
+        "B": "Good books often inspire new questions rather than just giving facts.",
+        "C": "Students dislike books that are difficult to understand.",
+        "D": "Astronomy and history are the same subject."
+      },
+      "answer": "B",
+      "explanation": "The passage argues that strong books make readers more curious.",
+      "tags": [
+        "sat",
+        "reading",
+        "r9",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R018",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R9",
+      "passage": "A school newspaper asked students to write about a book that changed the way they saw a subject in class. Many responses described the same feeling: the best books did not simply provide facts; they changed the reader's questions. A student who wrote about astronomy said the book helped her notice how much she did not know. Another student said a history book made him curious about the people behind the dates. The editors concluded that reading can matter most when it increases curiosity rather than ending it.",
+      "stem": "What does the astronomy student say the book helped her do?",
+      "choices": {
+        "A": "Memorize every fact in the chapter.",
+        "B": "Notice how much she did not know.",
+        "C": "Stop caring about astronomy.",
+        "D": "Avoid asking questions."
+      },
+      "answer": "B",
+      "explanation": "The student realized the book revealed gaps in her knowledge.",
+      "tags": [
+        "sat",
+        "reading",
+        "r9",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R019",
+      "section": "Reading and Writing",
+      "domain": "Information and Ideas",
+      "skill": "Reading comprehension",
+      "difficulty": "Easy",
+      "format": "passage_based",
+      "passage_id": "R10",
+      "passage": "A public art project painted large crosswalks near a train station. The bright shapes made the street easier to notice, and drivers slowed down more often as they approached the intersection. Residents also said the art made a familiar place feel less ordinary. Some cities treat public art as decoration, but the organizers of this project saw it as a tool that could improve both safety and civic pride.",
+      "stem": "What is the passage mainly about?",
+      "choices": {
+        "A": "The train station should be removed from the neighborhood.",
+        "B": "Public art can improve both safety and the feeling of a place.",
+        "C": "Crosswalks are best when they are invisible.",
+        "D": "Drivers always ignore colorful street designs."
+      },
+      "answer": "B",
+      "explanation": "The passage connects art with safety and community identity.",
+      "tags": [
+        "sat",
+        "reading",
+        "r10",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "R020",
+      "section": "Reading and Writing",
+      "domain": "Craft and Structure",
+      "skill": "Reading comprehension",
+      "difficulty": "Medium",
+      "format": "passage_based",
+      "passage_id": "R10",
+      "passage": "A public art project painted large crosswalks near a train station. The bright shapes made the street easier to notice, and drivers slowed down more often as they approached the intersection. Residents also said the art made a familiar place feel less ordinary. Some cities treat public art as decoration, but the organizers of this project saw it as a tool that could improve both safety and civic pride.",
+      "stem": "Which detail best supports the idea that the art improved safety?",
+      "choices": {
+        "A": "Drivers slowed down more often as they approached the intersection.",
+        "B": "Residents said the place felt less ordinary.",
+        "C": "The crosswalks were near a train station.",
+        "D": "The shapes were bright."
+      },
+      "answer": "A",
+      "explanation": "Slowing down suggests safer driving behavior.",
+      "tags": [
+        "sat",
+        "reading",
+        "r10",
+        "comprehension"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "ready"
+    },
+    {
+      "id": "C001",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "The table shows the number of practice questions completed by four students in one week. Which student completed the most questions?",
+      "choices": {
+        "A": "Ava",
+        "B": "Ben",
+        "C": "Mina",
+        "D": "Zane"
+      },
+      "answer": "C",
+      "explanation": "Mina completed 48 questions, which is the highest value in the table.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "table"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "table",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Ava": 42,
+        "Ben": 35,
+        "Mina": 48,
+        "Zane": 40
+      }
+    },
+    {
+      "id": "C002",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A tutoring app tracked time spent on Math review across four days. On which day did the student study the longest?",
+      "choices": {
+        "A": "Monday",
+        "B": "Tuesday",
+        "C": "Wednesday",
+        "D": "Thursday"
+      },
+      "answer": "D",
+      "explanation": "Thursday has the greatest number of minutes: 50.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "table"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "table",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Monday": 25,
+        "Tuesday": 40,
+        "Wednesday": 35,
+        "Thursday": 50
+      }
+    },
+    {
+      "id": "C003",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "The bar chart values below show the number of questions answered correctly in each section. Which section had the lowest score?",
+      "choices": {
+        "A": "Math",
+        "B": "Writing",
+        "C": "Reading",
+        "D": "Science"
+      },
+      "answer": "C",
+      "explanation": "Reading has 14, the smallest value.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "bar_chart"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "bar_chart",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Math": 18,
+        "Reading": 14,
+        "Writing": 16,
+        "Science": 20
+      }
+    },
+    {
+      "id": "C004",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A line graph shows weekly scores of 62, 68, 70, and 76. What is the total increase from the first week to the last week?",
+      "choices": {
+        "A": 8,
+        "B": 10,
+        "C": 12,
+        "D": 14
+      },
+      "answer": "D",
+      "explanation": "76 - 62 = 14.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "line_graph"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "line_graph",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Week 1": 62,
+        "Week 2": 68,
+        "Week 3": 70,
+        "Week 4": 76
+      }
+    },
+    {
+      "id": "C005",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A table shows SAT practice accuracy by topic. Which topic improved the most from Round 1 to Round 2?",
+      "choices": {
+        "A": "Algebra",
+        "B": "Geometry",
+        "C": "Grammar",
+        "D": "Reading"
+      },
+      "answer": "C",
+      "explanation": "Grammar improved by 15 points, the largest increase.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "comparison_table"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "comparison_table",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Algebra": [
+          45,
+          60
+        ],
+        "Geometry": [
+          50,
+          56
+        ],
+        "Grammar": [
+          40,
+          55
+        ],
+        "Reading": [
+          52,
+          58
+        ]
+      }
+    },
+    {
+      "id": "C006",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A simple coordinate grid shows points A(1,2), B(3,6), and C(5,10). Which statement is true?",
+      "choices": {
+        "A": "The points lie on a line with slope 2.",
+        "B": "The points form a horizontal line.",
+        "C": "The points have no relationship.",
+        "D": "The slope is 1/2."
+      },
+      "answer": "A",
+      "explanation": "Each time x increases by 2, y increases by 4, so the slope is 4/2 = 2.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "coordinate_grid"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "coordinate_grid",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "A": [
+          1,
+          2
+        ],
+        "B": [
+          3,
+          6
+        ],
+        "C": [
+          5,
+          10
+        ]
+      }
+    },
+    {
+      "id": "C007",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "The diagram shows a rectangle split into 3 equal columns and 2 equal rows. If the whole rectangle has area 30 square units, what is the area of one small section?",
+      "choices": {
+        "A": 5,
+        "B": 4,
+        "C": 6,
+        "D": 10
+      },
+      "answer": "A",
+      "explanation": "The rectangle has 6 equal parts, so 30 ÷ 6 = 5.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "diagram"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "diagram",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "columns": 3,
+        "rows": 2,
+        "total_area": 30
+      }
+    },
+    {
+      "id": "C008",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A chart shows that a student answered 12 questions correctly out of 15 on Monday and 18 out of 24 on Tuesday. On which day was the accuracy higher?",
+      "choices": {
+        "A": "Tuesday",
+        "B": "They were equal",
+        "C": "Neither day",
+        "D": "Monday"
+      },
+      "answer": "D",
+      "explanation": "Monday accuracy is 12/15 = 80%, while Tuesday is 18/24 = 75%.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "fraction_chart"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "fraction_chart",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Monday": [
+          12,
+          15
+        ],
+        "Tuesday": [
+          18,
+          24
+        ]
+      }
+    },
+    {
+      "id": "C009",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "The table below gives the number of users who logged in each day. What is the average number of users per day?",
+      "choices": {
+        "A": 120,
+        "B": 130,
+        "C": 135,
+        "D": 150
+      },
+      "answer": "B",
+      "explanation": "Add 120 + 140 + 100 + 160 = 520, then divide by 4 to get 130.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "table"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "table",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "Mon": 120,
+        "Tue": 140,
+        "Wed": 100,
+        "Thu": 160
+      }
+    },
+    {
+      "id": "C010",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A gauge chart shows a study streak rising from 3 days to 11 days. By how many days did the streak increase?",
+      "choices": {
+        "A": 7,
+        "B": 9,
+        "C": 8,
+        "D": 11
+      },
+      "answer": "C",
+      "explanation": "11 - 3 = 8.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "gauge_chart"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "gauge_chart",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "start": 3,
+        "end": 11
+      }
+    },
+    {
+      "id": "C011",
+      "section": "Math",
+      "domain": "Data Analysis",
+      "skill": "Charts, tables, and interpretation",
+      "difficulty": "Medium",
+      "format": "visual",
+      "stem": "A scatterplot shows that as study time increases, practice accuracy generally increases too. What kind of relationship is shown?",
+      "choices": {
+        "A": "negative correlation",
+        "B": "positive correlation",
+        "C": "no correlation",
+        "D": "random correlation"
+      },
+      "answer": "B",
+      "explanation": "When both variables rise together, that is a positive correlation.",
+      "tags": [
+        "sat",
+        "math",
+        "data_analysis",
+        "scatterplot"
+      ],
+      "gamemodes": [
+        "Study",
+        "Practice",
+        "Review",
+        "Challenge"
+      ],
+      "source_type": "original_seed",
+      "status": "needs_visual",
+      "visual_spec": {
+        "type": "scatterplot",
+        "bolt_instruction": "Create a clean, professional SAT-style visual for this item. Keep it simple, high-contrast, and easy to read. Use the data/context provided in the record. Do not invent extra information."
+      },
+      "visual_data": {
+        "trend": "upward"
+      }
+    }
+  ]
+}

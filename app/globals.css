@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Cognify Design System
+ *
+ * Palette pulled directly from the actual Cognify logo (the gear+brain mark's
+ * blue-to-purple gradient, paired with the deep navy wordmark) rather than
+ * invented from scratch — navy, blue, purple, sky blue, teal/aqua, white.
+ * Milo gets the teal/aqua end of this same family (not an unrelated hue),
+ * so the AI reads as a distinct voice while still feeling "in-brand."
+ * Semantic red/green for correct/incorrect answers stays separate from the
+ * brand palette on purpose — that's pedagogical feedback, not branding, and
+ * shouldn't compete with or be confused for it.
+ */
+
+@layer base {
+  :root {
+    --background: 210 45% 98%;
+    --foreground: 224 39% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 39% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 39% 12%;
+
+    /* Primary — the logo's vivid blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Purple — the logo's gradient partner. Its own token (not folded into
+       "accent") so components can deliberately pair primary+purple for the
+       brand gradient on hero/premium moments, matching the logo itself. */
+    --purple: 258 70% 58%;
+    --purple-foreground: 0 0% 100%;
+
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 224 30% 20%;
+
+    --muted: 210 25% 95%;
+    --muted-foreground: 220 15% 46%;
+
+    /* Accent — sky blue: the lighter, airier member of the family, for
+       highlights and secondary emphasis without the weight of primary blue */
+    --accent: 199 89% 55%;
+    --accent-foreground: 224 39% 12%;
+
+    /* Milo — teal/aqua, part of the same brand family, reserved for the AI
+       tutor's presence (avatar glow, message bubbles, AI-authored badges) */
+    --milo: 174 65% 38%;
+    --milo-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 152 55% 36%;
+    --success-foreground: 152 55% 97%;
+
+    --warning: 38 85% 50%;
+    --warning-foreground: 38 85% 12%;
+
+    --info: 199 89% 55%;
+    --info-foreground: 224 39% 12%;
+
+    --border: 214 25% 89%;
+    --input: 214 25% 89%;
+    --ring: 221 83% 53%;
+
+    /* Chart colors */
+    --chart-1: 221 83% 53%;
+    --chart-2: 258 70% 58%;
+    --chart-3: 174 65% 38%;
+    --chart-4: 152 55% 36%;
+    --chart-5: 199 89% 55%;
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Sidebar width */
+    --sidebar-width: 16rem;
+
+    /* Sidebar — deliberately NOT theme-dependent. A fixed dark-navy panel
+       gives the app a strong, consistent wayfinding anchor regardless of
+       light/dark mode, the way Notion/Linear/OnePrep/Knowt all do it,
+       rather than the sidebar just mirroring whatever the page background
+       happens to be. */
+    --sidebar-background: 226 45% 11%;
+    --sidebar-foreground: 210 30% 92%;
+    --sidebar-muted-foreground: 220 15% 62%;
+    --sidebar-border: 226 30% 20%;
+    --sidebar-accent: 226 30% 17%;
+  }
+
+  .dark {
+    --background: 226 35% 8%;
+    --foreground: 210 30% 95%;
+
+    --card: 226 30% 11%;
+    --card-foreground: 210 30% 95%;
+    --popover: 226 30% 11%;
+    --popover-foreground: 210 30% 95%;
+
+    --primary: 221 83% 64%;
+    --primary-foreground: 226 35% 9%;
+
+    --purple: 258 75% 70%;
+    --purple-foreground: 226 35% 9%;
+
+    --secondary: 226 20% 16%;
+    --secondary-foreground: 210 25% 92%;
+
+    --muted: 226 20% 16%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 199 85% 62%;
+    --accent-foreground: 226 35% 9%;
+
+    --milo: 174 60% 52%;
+    --milo-foreground: 174 60% 8%;
+
+    --destructive: 0 65% 56%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 152 50% 48%;
+    --success-foreground: 152 50% 8%;
+
+    --warning: 38 80% 58%;
+    --warning-foreground: 38 80% 10%;
+
+    --info: 199 85% 62%;
+    --info-foreground: 226 35% 9%;
+
+    --border: 226 20% 20%;
+    --input: 226 20% 20%;
+    --ring: 221 83% 64%;
+
+    --chart-1: 221 83% 64%;
+    --chart-2: 258 75% 70%;
+    --chart-3: 174 60% 52%;
+    --chart-4: 152 50% 48%;
+    --chart-5: 199 85% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure text doesn't overflow */
+  p, h1, h2, h3, h4, h5, h6, span, a, li {
+    @apply break-words;
+  }
+
+  /* Typography - mobile first.
+     h1/h2 get the display serif (Fraunces) — used deliberately, only for
+     genuine headline moments, so it reads as a signature rather than being
+     spent everywhere. h3 and below stay in the body face; they're doing UI
+     labeling work, not making a statement. */
+  h1 {
+    font-family: var(--font-display);
+    @apply text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    @apply text-xl font-semibold tracking-tight sm:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg font-semibold tracking-tight sm:text-xl;
+  }
+
+  h4 {
+    @apply text-base font-semibold sm:text-lg;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Numbers that matter — scores, timers, question counts — get tabular
+     figures in the mono face so they read as instrumentation, the way a
+     real countdown or scoreboard would, rather than blending into body text. */
+  .font-numeric {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  body, html {
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Gradient backgrounds — matches the logo's actual blue-to-purple gradient
+     via the token variables (not hardcoded values), so this stays correct
+     if the palette ever shifts again. Used deliberately for hero/premium
+     moments — score reveals, Milo's avatar, key CTAs — not everywhere. */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--purple)) 100%);
+  }
+
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--purple)) 100%);
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--purple)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Milo gets his own gradient — teal/aqua into primary blue, so his
+     presence is recognizably distinct from the primary/purple brand
+     gradient used for scores and CTAs. */
+  .bg-gradient-milo {
+    background: linear-gradient(135deg, hsl(var(--milo)) 0%, hsl(var(--primary)) 100%);
+  }
+
+  .bg-gradient-subtle {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  /* Soft glow — the quality that makes an AI avatar or a hero score number
+     feel premium instead of flat. Used sparingly: Milo's orb, a just-hit
+     streak milestone, a freshly-revealed score. */
+  .glow-primary {
+    box-shadow: 0 0 40px -8px hsl(var(--primary) / 0.45);
+  }
+
+  .glow-milo {
+    box-shadow: 0 0 40px -8px hsl(var(--milo) / 0.5);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 40px -8px hsl(var(--purple) / 0.45);
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl;
+  }
+
+  /* Focus ring */
+  .focus-ring {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-smooth hover:border-primary/20 hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  /* Text balance for better readability */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Animation delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease-out;
+}
