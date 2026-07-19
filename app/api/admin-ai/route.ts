@@ -172,7 +172,7 @@ async function assistTutorResponse(question: any, studentProfile: any) {
   const prompt = `You are an AI assistant helping a human tutor draft the best possible response to a student's question on Cognify.
 
 STUDENT'S QUESTION:
-${question.image_url ? '[An image was attached to the original question — not visible to you here; use the text below and the tutor's own reading of the image.]' : ''}
+${question.image_url ? "[An image was attached to the original question — not visible to you here; use the text below and the tutor's own reading of the image.]" : ''}
 Text: "${question.text || question.content || ''}"
 Subject: ${question.subject || 'Not specified'}
 Topic: ${question.topic || 'Not specified'}
