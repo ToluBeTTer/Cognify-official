@@ -50,7 +50,7 @@ export default function OnboardingPage() {
   }, [user, profile, authLoading, router]);
 
   const steps = STEPS;
-  const progress = (currentStep / steps.length) * 100;
+  const progress = ((currentStep + 1) / steps.length) * 100;
   const isLastStep = currentStep === steps.length - 1;
 
   const handleNext = () => {
@@ -310,15 +310,15 @@ export default function OnboardingPage() {
       <div className="max-w-xl mx-auto">
         <div className="mb-8">
           <Progress value={progress} className="h-2" />
-          <div className="mt-3 flex items-center gap-3">
+          <div className="mt-3 flex items-center justify-between gap-2">
             {steps.map((step, index) => (
-              <div key={step.id} className="flex items-center gap-1">
+              <div key={step.id} className="flex items-center gap-1.5 min-w-0">
                 <div className={cn('h-2 w-2 rounded-full flex-shrink-0 transition-colors',
                   index < currentStep  ? 'bg-primary' :
                   index === currentStep ? 'bg-primary ring-2 ring-primary/30' :
                   'bg-muted-foreground/30'
                 )} />
-                <span className={cn('text-xs hidden sm:inline',
+                <span className={cn('text-xs hidden sm:inline truncate',
                   index <= currentStep ? 'text-primary font-medium' : 'text-muted-foreground'
                 )}>
                   {step.title}

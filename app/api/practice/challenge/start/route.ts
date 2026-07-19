@@ -63,7 +63,6 @@ export async function POST(req: NextRequest) {
       generated_question_ids: [firstQuestion.id],
       challenge_state: state,
       total_questions: 0,
-      started_at: new Date().toISOString(),
     })
     .select()
     .single();
