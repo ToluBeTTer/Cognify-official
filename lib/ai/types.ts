@@ -52,6 +52,7 @@ export interface AIResponse {
     ocrConfidence?: number;
     extractedQuestions?: Array<{
       question_text: string;
+      passage?: string | null;
       question_format: 'multiple_choice' | 'numeric_entry' | 'passage_based' | 'graph_table' | 'image_based' | 'two_part' | 'multi_select';
       choices?: Record<string, string> | null;
       correct_answer?: string | null;
