@@ -1,15 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { MiloFace } from './milo-face';
 import { MASCOT_CATALOG, RARITY_COLOR, type ItemCategory } from '@/lib/mascot/catalog';
 import type { MascotProfileData } from '@/hooks/use-mascot-profile';
 import { Button } from '@/components/ui/button';
-import { X, Coins, Check, Lock } from 'lucide-react';
+import { X, Coins, Check, Lock, ArrowUp, ArrowDown, ArrowLeft, ArrowRight, RotateCcw } from 'lucide-react';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 
 const CATEGORIES: { key: ItemCategory; label: string }[] = [
+  { key: 'color', label: 'Color' },
   { key: 'eyes', label: 'Eyes' },
   { key: 'mouth', label: 'Mouth' },
   { key: 'nose', label: 'Nose' },
@@ -19,16 +20,43 @@ const CATEGORIES: { key: ItemCategory; label: string }[] = [
   { key: 'bg', label: 'Background' },
 ];
 
+const POSITIONABLE: ItemCategory[] = ['hair', 'accessory', 'clothing'];
+const NUDGE = 2;
+
 interface MiloWardrobeProps {
   profile: MascotProfileData;
   onEquip: (category: ItemCategory, itemId: string) => Promise<void>;
   onPurchase: (itemId: string) => Promise<boolean>;
+  onSaveOffset?: (category: string, dx: number, dy: number) => Promise<void>;
   onClose: () => void;
 }
 
-export function MiloWardrobe({ profile, onEquip, onPurchase, onClose }: MiloWardrobeProps) {
-  const [activeCategory, setActiveCategory] = useState<ItemCategory>('eyes');
+export function MiloWardrobe({ profile, onEquip, onPurchase, onSaveOffset, onClose }: MiloWardrobeProps) {
+  const [activeCategory, setActiveCategory] = useState<ItemCategory>('color');
   const items = MASCOT_CATALOG.filter((i) => i.category === activeCategory);
+  const canPosition = POSITIONABLE.includes(activeCategory) && profile.equippedItems[activeCategory]?.split('-')[1] !== 'none';
+
+  const offset = profile.itemOffsets[activeCategory] ?? { dx: 0, dy: 0 };
+
+  const nudge = useCallback(
+    (dx: number, dy: number) => {
+      if (!onSaveOffset) return;
+      onSaveOffset(activeCategory, offset.dx + dx, offset.dy + dy);
+    },
+    [onSaveOffset, activeCategory, offset]
+  );
+
+  useEffect(() => {
+    if (!canPosition) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowUp') { e.preventDefault(); nudge(0, -NUDGE); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); nudge(0, NUDGE); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); nudge(-NUDGE, 0); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); nudge(NUDGE, 0); }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [canPosition, nudge]);
 
   const handleItemClick = async (itemId: string, price: number) => {
     const owned = profile.ownedItems.includes(itemId);
@@ -68,7 +96,7 @@ export function MiloWardrobe({ profile, onEquip, onPurchase, onClose }: MiloWard
         </div>
 
         <div className="flex justify-center py-5 bg-secondary/20">
-          <MiloFace equipped={profile.equippedItems} size={110} expression="happy" />
+          <MiloFace equipped={profile.equippedItems} size={110} expression="happy" itemOffsets={profile.itemOffsets} />
         </div>
 
         <div className="flex gap-1.5 px-4 py-2 overflow-x-auto border-b border-border">
@@ -85,6 +113,25 @@ export function MiloWardrobe({ profile, onEquip, onPurchase, onClose }: MiloWard
             </button>
           ))}
         </div>
+
+        {canPosition && (
+          <div className="flex items-center justify-between gap-3 px-4 py-2.5 bg-secondary/30 border-b border-border">
+            <p className="text-xs text-muted-foreground">Drag with arrow keys, or use the pad:</p>
+            <div className="flex items-center gap-1">
+              <div className="grid grid-cols-3 gap-0.5">
+                <div />
+                <button onClick={() => nudge(0, -NUDGE)} className="p-1.5 rounded-md hover:bg-secondary"><ArrowUp className="h-3 w-3" /></button>
+                <div />
+                <button onClick={() => nudge(-NUDGE, 0)} className="p-1.5 rounded-md hover:bg-secondary"><ArrowLeft className="h-3 w-3" /></button>
+                <button onClick={() => onSaveOffset?.(activeCategory, 0, 0)} className="p-1.5 rounded-md hover:bg-secondary"><RotateCcw className="h-3 w-3" /></button>
+                <button onClick={() => nudge(NUDGE, 0)} className="p-1.5 rounded-md hover:bg-secondary"><ArrowRight className="h-3 w-3" /></button>
+                <div />
+                <button onClick={() => nudge(0, NUDGE)} className="p-1.5 rounded-md hover:bg-secondary"><ArrowDown className="h-3 w-3" /></button>
+                <div />
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="flex-1 overflow-y-auto p-4 grid grid-cols-3 gap-3">
           {items.map((item) => {
@@ -107,10 +154,17 @@ export function MiloWardrobe({ profile, onEquip, onPurchase, onClose }: MiloWard
                   </div>
                 )}
                 <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold"
-                  style={{ backgroundColor: `${RARITY_COLOR[item.rarity]}22`, color: RARITY_COLOR[item.rarity] }}
+                  className={cn(
+                    'w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold',
+                    item.category === 'color' && 'border-2 border-white/20'
+                  )}
+                  style={
+                    item.category === 'color'
+                      ? { backgroundColor: `hsl(${item.color})` }
+                      : { backgroundColor: `${RARITY_COLOR[item.rarity]}22`, color: RARITY_COLOR[item.rarity] }
+                  }
                 >
-                  {item.name[0]}
+                  {item.category !== 'color' && item.name[0]}
                 </div>
                 <p className="text-[11px] font-medium text-center leading-tight line-clamp-2">{item.name}</p>
                 {!owned && (

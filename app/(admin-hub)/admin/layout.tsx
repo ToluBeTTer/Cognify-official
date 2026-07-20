@@ -2,10 +2,16 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { useAuth, getRoleDashboard } from '@/lib/supabase';
 import { AdminSidebar } from '@/components/layout/admin-sidebar';
 import { AdminHeader } from '@/components/layout/admin-header';
 import { Loader2 } from 'lucide-react';
+
+const FloatingMilo = dynamic(
+  () => import('@/components/mascot/floating-milo').then((mod) => mod.FloatingMilo),
+  { ssr: false }
+);
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const { user, profile, isLoading, isOnboarded } = useAuth();
@@ -38,6 +44,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <AdminHeader />
         <main className="p-4 sm:p-6 lg:p-8 pb-20 lg:pb-8">{children}</main>
       </div>
+      <FloatingMilo />
     </div>
   );
 }

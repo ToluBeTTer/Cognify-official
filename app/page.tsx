@@ -90,9 +90,17 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border bg-muted/50 text-sm text-muted-foreground mb-6">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        {/* ambient glow orbs — the thing that was missing that made this
+            page read as "flat" instead of premium */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-primary/20 blur-[100px]" />
+          <div className="absolute top-10 -right-32 w-[380px] h-[380px] rounded-full bg-purple/20 blur-[100px]" />
+          <div className="absolute bottom-0 left-1/3 w-[320px] h-[320px] rounded-full bg-milo/15 blur-[100px]" />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-purple/10 text-sm font-medium mb-6 glow-primary">
             <Zap className="h-3.5 w-3.5 text-primary" />
             AI + Human tutors in one place
           </div>

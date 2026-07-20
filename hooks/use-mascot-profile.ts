@@ -11,6 +11,8 @@ export interface MascotProfileData {
   ownedItems: string[];
   equippedItems: Record<ItemCategory, string>;
   stats: { throws: number; chats: number; wallHits: number; offscreen: number };
+  savedPosition: { x: number; y: number; corner: string | null } | null;
+  itemOffsets: Record<string, { dx: number; dy: number }>;
 }
 
 const DEFAULT_PROFILE: MascotProfileData = {
@@ -20,6 +22,8 @@ const DEFAULT_PROFILE: MascotProfileData = {
   ownedItems: DEFAULT_OWNED,
   equippedItems: DEFAULT_EQUIPPED,
   stats: { throws: 0, chats: 0, wallHits: 0, offscreen: 0 },
+  savedPosition: null,
+  itemOffsets: {},
 };
 
 export function useMascotProfile() {
@@ -47,6 +51,7 @@ export function useMascotProfile() {
       }
 
       if (data) {
+        const pos = data.positions as any;
         setProfile({
           credits: data.credits,
           totalEarned: data.total_earned,
@@ -54,6 +59,8 @@ export function useMascotProfile() {
           ownedItems: data.owned_items ?? DEFAULT_OWNED,
           equippedItems: { ...DEFAULT_EQUIPPED, ...(data.equipped_items as any) },
           stats: { throws: 0, chats: 0, wallHits: 0, offscreen: 0, ...(data.stats as any) },
+          savedPosition: pos && typeof pos.x === 'number' ? { x: pos.x, y: pos.y, corner: pos.corner ?? null } : null,
+          itemOffsets: (data.mascot_config as any) ?? {},
         });
       }
 
@@ -85,10 +92,14 @@ export function useMascotProfile() {
     async (category: ItemCategory, itemId: string) => {
       if (!user) return;
       setProfile((prev) => ({ ...prev, equippedItems: { ...prev.equippedItems, [category]: itemId } }));
-      const next = { ...profile.equippedItems, [category]: itemId };
-      await supabase.from('mascot_profiles').update({ equipped_items: next }).eq('user_id', user.id);
+      const { error } = await supabase.rpc('equip_mascot_item', {
+        p_user_id: user.id,
+        p_category: category,
+        p_item_id: itemId,
+      });
+      if (error) console.error('Failed to equip item', error);
     },
-    [user, profile.equippedItems]
+    [user]
   );
 
   const purchase = useCallback(
@@ -99,19 +110,30 @@ export function useMascotProfile() {
       if (profile.ownedItems.includes(itemId)) return true;
       if (profile.credits < item.price) return false;
 
-      const nextOwned = [...profile.ownedItems, itemId];
-      const nextCredits = profile.credits - item.price;
-      setProfile((prev) => ({ ...prev, ownedItems: nextOwned, credits: nextCredits }));
+      const prevOwned = profile.ownedItems;
+      const prevCredits = profile.credits;
+      setProfile((prev) => ({
+        ...prev,
+        ownedItems: [...prev.ownedItems, itemId],
+        credits: prev.credits - item.price,
+      }));
 
-      const { error } = await supabase
-        .from('mascot_profiles')
-        .update({ owned_items: nextOwned, credits: nextCredits })
-        .eq('user_id', user.id);
-      if (error) {
-        // roll back optimistic update on failure
-        setProfile((prev) => ({ ...prev, ownedItems: profile.ownedItems, credits: profile.credits }));
+      const { data, error } = await supabase.rpc('purchase_mascot_item', {
+        p_user_id: user.id,
+        p_item_id: itemId,
+        p_price: item.price,
+      });
+
+      if (error || !data) {
+        setProfile((prev) => ({ ...prev, ownedItems: prevOwned, credits: prevCredits }));
         return false;
       }
+
+      setProfile((prev) => ({
+        ...prev,
+        ownedItems: (data as any).owned_items ?? prev.ownedItems,
+        credits: (data as any).credits ?? prev.credits,
+      }));
       return true;
     },
     [user, profile.ownedItems, profile.credits]
@@ -120,23 +142,39 @@ export function useMascotProfile() {
   const bumpStat = useCallback(
     async (stat: keyof MascotProfileData['stats']) => {
       if (!user) return;
-      const nextStats = { ...profile.stats, [stat]: (profile.stats[stat] || 0) + 1 };
-      setProfile((prev) => ({ ...prev, stats: nextStats }));
-      await supabase
-        .from('mascot_profiles')
-        .update({ stats: nextStats })
-        .eq('user_id', user.id);
+      setProfile((prev) => ({ ...prev, stats: { ...prev.stats, [stat]: (prev.stats[stat] || 0) + 1 } }));
+      const { error } = await supabase.rpc('bump_mascot_stat', { p_user_id: user.id, p_stat: stat });
+      if (error) console.error('Failed to bump stat', error);
     },
-    [user, profile.stats]
+    [user]
   );
 
   const savePosition = useCallback(
-    async (position: { x: number; y: number }) => {
+    async (position: { x: number; y: number; corner?: string | null }) => {
       if (!user) return;
-      await supabase
-        .from('mascot_profiles')
-        .update({ positions: { last: position } })
-        .eq('user_id', user.id);
+      setProfile((prev) => ({ ...prev, savedPosition: { x: position.x, y: position.y, corner: position.corner ?? null } }));
+      const { error } = await supabase.rpc('save_mascot_position', {
+        p_user_id: user.id,
+        p_x: position.x,
+        p_y: position.y,
+        p_corner: position.corner ?? null,
+      });
+      if (error) console.error('Failed to save mascot position', error);
+    },
+    [user]
+  );
+
+  const saveItemOffset = useCallback(
+    async (category: string, dx: number, dy: number) => {
+      if (!user) return;
+      setProfile((prev) => ({ ...prev, itemOffsets: { ...prev.itemOffsets, [category]: { dx, dy } } }));
+      const { error } = await supabase.rpc('save_mascot_item_offset', {
+        p_user_id: user.id,
+        p_category: category,
+        p_dx: dx,
+        p_dy: dy,
+      });
+      if (error) console.error('Failed to save item offset', error);
     },
     [user]
   );
@@ -157,5 +195,5 @@ export function useMascotProfile() {
     [user]
   );
 
-  return { profile, loading, equip, purchase, bumpStat, savePosition, awardCreditsForSession, reload: load };
+  return { profile, loading, equip, purchase, bumpStat, savePosition, saveItemOffset, awardCreditsForSession, reload: load };
 }

@@ -2,10 +2,16 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { useAuth, getRoleDashboard } from '@/lib/supabase';
 import { CreatorSidebar } from '@/components/layout/creator-sidebar';
 import { CreatorHeader } from '@/components/layout/creator-header';
 import { Loader2 } from 'lucide-react';
+
+const FloatingMilo = dynamic(
+  () => import('@/components/mascot/floating-milo').then((mod) => mod.FloatingMilo),
+  { ssr: false }
+);
 
 export default function CreatorLayout({ children }: { children: React.ReactNode }) {
   const { user, profile, isLoading, isOnboarded } = useAuth();
@@ -38,6 +44,7 @@ export default function CreatorLayout({ children }: { children: React.ReactNode 
         <CreatorHeader />
         <main className="p-4 sm:p-6 lg:p-8 pb-20 lg:pb-8">{children}</main>
       </div>
+      <FloatingMilo />
     </div>
   );
 }

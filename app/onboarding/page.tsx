@@ -59,6 +59,7 @@ export default function OnboardingPage() {
 
   const handleBack = () => {
     if (currentStep > 0) setCurrentStep(currentStep - 1);
+    setSaveError(null);
   };
 
   const handleSubjectToggle = (subjectId: string) => {
@@ -76,63 +77,29 @@ export default function OnboardingPage() {
     setIsSaving(true);
     setSaveError(null);
 
-    const { error: upsertError } = await supabase
-      .from('profiles')
-      .upsert(
-        {
-          user_id: user.id,
-          email: user.email ?? '',
-          full_name: (user.user_metadata?.full_name as string) ?? null,
-          role: 'student',
-          grade_level: formData.grade_level ? parseInt(formData.grade_level) : null,
-          target_sat_score: formData.target_sat_score ? parseInt(formData.target_sat_score) : null,
-          test_date: formData.test_date || null,
-          preferred_subjects: formData.preferred_subjects,
-          onboarding_completed: true,
-          onboarding_step: steps.length,
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: 'user_id' }
-      );
+    // Ensure a profile row exists first (new signups may not have one yet
+    // if the auth trigger hasn't caught up), then save via RPC — this
+    // goes straight through Postgres rather than PostgREST's REST-table
+    // schema cache, which is what was failing here before.
+    await supabase.rpc('ensure_profile_exists', {
+      p_email: user.email ?? '',
+      p_full_name: (user.user_metadata?.full_name as string) ?? null,
+    });
 
-    if (upsertError) {
-      console.error('[onboarding] upsert error:', upsertError);
+    const { error: rpcSaveError } = await supabase.rpc('save_academic_profile', {
+      p_user_id: user.id,
+      p_grade_level: formData.grade_level ? parseInt(formData.grade_level) : null,
+      p_target_sat_score: formData.target_sat_score ? parseInt(formData.target_sat_score) : null,
+      p_test_date: formData.test_date || null,
+      p_preferred_subjects: formData.preferred_subjects,
+      p_complete_onboarding: true,
+      p_onboarding_step: steps.length,
+    });
 
-      if (upsertError.code === '42501' || upsertError.message?.includes('policy')) {
-        const { error: rpcError } = await supabase.rpc('ensure_profile_exists', {
-          p_email: user.email ?? '',
-          p_full_name: (user.user_metadata?.full_name as string) ?? null,
-        });
-
-        if (rpcError) {
-          setSaveError('Could not create your profile. Please try again or contact support.');
-          setIsSaving(false);
-          return;
-        }
-
-        const { error: retryError } = await supabase
-          .from('profiles')
-          .update({
-            grade_level: formData.grade_level ? parseInt(formData.grade_level) : null,
-            target_sat_score: formData.target_sat_score ? parseInt(formData.target_sat_score) : null,
-            test_date: formData.test_date || null,
-            preferred_subjects: formData.preferred_subjects,
-            onboarding_completed: true,
-            onboarding_step: steps.length,
-            updated_at: new Date().toISOString(),
-          })
-          .eq('user_id', user.id);
-
-        if (retryError) {
-          setSaveError(`Failed to save profile: ${retryError.message}`);
-          setIsSaving(false);
-          return;
-        }
-      } else {
-        setSaveError(`Failed to save profile: ${upsertError.message}`);
-        setIsSaving(false);
-        return;
-      }
+    if (rpcSaveError) {
+      setSaveError(`Failed to save profile: ${rpcSaveError.message}`);
+      setIsSaving(false);
+      return;
     }
 
     const { data: saved, error: verifyError } = await supabase

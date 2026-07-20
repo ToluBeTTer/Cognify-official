@@ -13,7 +13,7 @@ interface ChatMessage {
   text: string;
 }
 
-export function MiloChatCasual({ onClose }: { onClose: () => void }) {
+export function MiloChatCasual({ onClose, onOpen }: { onClose: () => void; onOpen?: () => void }) {
   const { profile, bumpStat } = useMascotProfile();
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: 'milo', text: "Hey! Just here to chat if you want a break. What's up?" },
@@ -21,6 +21,11 @@ export function MiloChatCasual({ onClose }: { onClose: () => void }) {
   const [input, setInput] = useState('');
   const [isSending, setIsSending] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    onOpen?.();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -59,7 +64,7 @@ export function MiloChatCasual({ onClose }: { onClose: () => void }) {
     <div className="fixed bottom-6 right-6 z-[62] w-[340px] max-w-[90vw] bg-card border border-border rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-4">
       <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-milo/10">
         <div className="flex items-center gap-2">
-          <MiloFace equipped={profile.equippedItems} size={28} />
+          <MiloFace equipped={profile.equippedItems} size={28} variant="widget" />
           <div>
             <p className="text-sm font-semibold leading-tight">Milo</p>
             <p className="text-[11px] text-muted-foreground leading-tight">just hanging out</p>

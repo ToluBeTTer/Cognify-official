@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { MessageCircleQuestion, Sparkles, Shirt, X } from 'lucide-react';
+import { MessageCircleQuestion, Sparkles, Shirt, Trophy, X } from 'lucide-react';
 
 interface MiloActionMenuProps {
   anchorSize: number;
   getPosition: () => { x: number; y: number };
   onClose: () => void;
-  onSelect: (mode: 'help' | 'chat' | 'wardrobe') => void;
+  onSelect: (mode: 'help' | 'chat' | 'wardrobe' | 'leaderboard') => void;
 }
 
 export function MiloActionMenu({ anchorSize, getPosition, onClose, onSelect }: MiloActionMenuProps) {
@@ -17,7 +17,7 @@ export function MiloActionMenu({ anchorSize, getPosition, onClose, onSelect }: M
   useEffect(() => {
     const { x, y } = getPosition();
     const menuWidth = 220;
-    const menuHeight = 176;
+    const menuHeight = 228;
     const openLeft = x + anchorSize + menuWidth > window.innerWidth;
     const openAbove = y + anchorSize + menuHeight > window.innerHeight;
     setStyle({
@@ -68,6 +68,16 @@ export function MiloActionMenu({ anchorSize, getPosition, onClose, onSelect }: M
         <div>
           <p className="text-sm font-medium">Customize Milo</p>
           <p className="text-xs text-muted-foreground">Cosmetics & Cogs shop</p>
+        </div>
+      </button>
+      <button
+        onClick={() => onSelect('leaderboard')}
+        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-secondary/60 transition-colors text-left"
+      >
+        <Trophy className="h-4 w-4 text-warning shrink-0" />
+        <div>
+          <p className="text-sm font-medium">Leaderboard</p>
+          <p className="text-xs text-muted-foreground">Top studiers this term</p>
         </div>
       </button>
       <button

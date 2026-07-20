@@ -81,7 +81,7 @@ export function AdminSidebar() {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-0 left-0 z-40 h-screen w-64 bg-sidebar border-r border-sidebar-border transition-transform duration-200 lg:translate-x-0',
+          'fixed top-0 left-0 z-40 h-screen w-64 bg-sidebar border-r border-sidebar-border transition-transform duration-200 lg:translate-x-0 overflow-hidden',
           isMobileOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >

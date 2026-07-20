@@ -140,15 +140,13 @@ export default function ProfilePage() {
     if (!profile) return;
     setIsSaving(true);
     try {
-      const { error } = await supabase
-        .from('profiles')
-        .update({
-          grade_level: formData.grade_level ? parseInt(formData.grade_level) : null,
-          target_sat_score: formData.target_sat_score ? parseInt(formData.target_sat_score) : null,
-          test_date: formData.test_date || null,
-          preferred_subjects: formData.preferred_subjects,
-        })
-        .eq('user_id', profile.user_id);
+      const { error } = await supabase.rpc('save_academic_profile', {
+        p_user_id: profile.user_id,
+        p_grade_level: formData.grade_level ? parseInt(formData.grade_level) : null,
+        p_target_sat_score: formData.target_sat_score ? parseInt(formData.target_sat_score) : null,
+        p_test_date: formData.test_date || null,
+        p_preferred_subjects: formData.preferred_subjects,
+      });
       if (error) throw error;
       await refreshProfile();
       toast.success('Academic info updated');
