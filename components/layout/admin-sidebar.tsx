@@ -25,6 +25,7 @@ import {
   Sun,
   Moon,
   GraduationCap,
+  Video,
 } from 'lucide-react';
 import { useState } from 'react';
 import { CognifyLogo } from '@/components/ui/cognify-logo';
@@ -43,6 +44,7 @@ const teamNavItems = [
 
 const toolsNavItems = [
   { title: 'Study Center', href: '/admin/study', icon: GraduationCap },
+  { title: 'Video Library', href: '/videos', icon: Video },
   { title: 'Analytics', href: '/admin/analytics', icon: BarChart3 },
   { title: 'Audit Logs', href: '/admin/logs', icon: Activity },
 ];

@@ -13,6 +13,7 @@ import { pickLine } from '@/lib/mascot/voice-lines';
 const SIZE = 68;
 const REST_MARGIN = 20;
 const SUPER_THROW_SPEED = 2200; // triggers the secret fly-off-screen easter egg
+const PLACEMENT_SPEED = 140; // release below this speed = "place it here", not "throw it"
 const DIZZY_WINDOW_MS = 1500;
 const DIZZY_BOUNCE_COUNT = 3;
 
@@ -33,8 +34,11 @@ export function FloatingMilo() {
   const isFlyingOff = useRef(false);
   const movedDistance = useRef(0);
   const lastPointer = useRef({ x: 0, y: 0, t: 0 });
+  const pointerHistory = useRef<{ x: number; y: number; t: number }[]>([]);
   const rafRef = useRef<number | null>(null);
   const squish = useRef({ x: 1, y: 1 });
+  const squishVel = useRef({ x: 0, y: 0 }); // spring velocity — gives the squash an elastic overshoot/wobble instead of a snap-back
+  const isPlaced = useRef(true); // true = resting exactly where put, no gravity (the "stick it anywhere" behavior)
   const initializedRef = useRef(false);
   const bounceTimestamps = useRef<number[]>([]);
   const hasSavedRestRef = useRef(true);
@@ -90,7 +94,7 @@ export function FloatingMilo() {
       const roll = Math.random();
       if (roll < 0.22) {
         showBubble(pickLine(Math.random() < 0.5 ? 'nagging' : 'factoid'), 4000);
-      } else if (roll < 0.4) {
+      } else if (roll < 0.4 && !isPlaced.current) {
         vel.current.y -= 40;
       }
     }, 16000);
@@ -145,26 +149,50 @@ export function FloatingMilo() {
     }, delay);
   }, [applyTransform, bumpStat, savePosition, showBubble]);
 
-  // Physics loop — gravity + wall bounce while released. When a throw
-  // exceeds the "too hard" threshold, it sails straight off the viewport
-  // entirely (the secret easter egg) instead of bouncing, then reappears
-  // later at a random edge. Otherwise it settles wherever it lands and
-  // stays there — no forced drift back to a "home" corner.
+  // Physics loop. Three states: dragging (follows pointer), placed (gentle
+  // release — stays exactly where you put it, gravity off, this is the
+  // "stick it anywhere" behavior), and thrown (a real throw — gravity +
+  // bounce with slime-like weight: heavy, low-bounce, and a spring-based
+  // squash that overshoots and wobbles rather than snapping back like a
+  // rubber ball). A throw settles back into "placed" once it stops moving.
   useEffect(() => {
-    const GRAVITY = 1400;
-    const FRICTION = 0.985;
-    const BOUNCE = 0.55;
+    const GRAVITY = 1300;
+    const FRICTION = 0.94; // more damping than a ball — doesn't roll/slide far
+    const BOUNCE = 0.32; // low restitution — a plop, not a bounce
+    const SPRING_STIFFNESS = 140;
+    const SPRING_DAMPING = 9;
     let last = performance.now();
     let stillFrames = 0;
+    let breatheT = 0;
+
+    const springStep = (dt: number) => {
+      // damped spring pulling squish back toward 1 — overshoots past 1
+      // before settling, which is what actually reads as "jelly" instead
+      // of "snapped back instantly".
+      const fx = -SPRING_STIFFNESS * (squish.current.x - 1) - SPRING_DAMPING * squishVel.current.x;
+      const fy = -SPRING_STIFFNESS * (squish.current.y - 1) - SPRING_DAMPING * squishVel.current.y;
+      squishVel.current.x += fx * dt;
+      squishVel.current.y += fy * dt;
+      squish.current.x += squishVel.current.x * dt;
+      squish.current.y += squishVel.current.y * dt;
+    };
 
     const tick = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.032);
       last = now;
 
       if (isDragging.current) {
-        pos.current.x += (dragTarget.current.x - pos.current.x) * 0.35;
-        pos.current.y += (dragTarget.current.y - pos.current.y) * 0.35;
-        applyTransform(pos.current.x, pos.current.y, 1.08, 0.92, 1);
+        pos.current.x += (dragTarget.current.x - pos.current.x) * 0.3;
+        pos.current.y += (dragTarget.current.y - pos.current.y) * 0.3;
+        // a slight lag-based stretch toward the drag direction feels goopier
+        // than a fixed squash while being carried around.
+        const dx = dragTarget.current.x - pos.current.x;
+        const dy = dragTarget.current.y - pos.current.y;
+        squish.current = {
+          x: 1 + Math.max(-0.25, Math.min(0.25, dy * 0.01)),
+          y: 1 - Math.max(-0.25, Math.min(0.25, dy * 0.01)) + Math.max(-0.1, Math.min(0.1, dx * 0.004)),
+        };
+        applyTransform(pos.current.x, pos.current.y, squish.current.x, squish.current.y, 1);
         rafRef.current = requestAnimationFrame(tick);
         return;
       }
@@ -187,6 +215,16 @@ export function FloatingMilo() {
         return;
       }
 
+      if (isPlaced.current) {
+        // stuck exactly where it was put — no gravity, just a slow idle
+        // breathing pulse so it doesn't look frozen/dead.
+        breatheT += dt;
+        const breathe = 1 + Math.sin(breatheT * 1.4) * 0.02;
+        applyTransform(pos.current.x, pos.current.y, breathe, 2 - breathe, 1);
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
+
       vel.current.y += GRAVITY * dt;
       pos.current.x += vel.current.x * dt;
       pos.current.y += vel.current.y * dt;
@@ -198,37 +236,44 @@ export function FloatingMilo() {
       if (pos.current.x < 0) {
         pos.current.x = 0;
         vel.current.x *= -BOUNCE;
-        squish.current = { x: 1.25, y: 0.75 };
+        squish.current = { x: 1.5, y: 0.62 };
+        squishVel.current = { x: 0, y: 0 };
         registerBounce();
       } else if (pos.current.x > maxX) {
         pos.current.x = maxX;
         vel.current.x *= -BOUNCE;
-        squish.current = { x: 1.25, y: 0.75 };
+        squish.current = { x: 1.5, y: 0.62 };
+        squishVel.current = { x: 0, y: 0 };
         registerBounce();
       }
       if (pos.current.y > maxY) {
         pos.current.y = maxY;
         vel.current.y *= -BOUNCE;
-        squish.current = { x: 1.2, y: 0.8 };
+        squish.current = { x: 1.55, y: 0.58 };
+        squishVel.current = { x: 0, y: 0 };
         if (Math.abs(vel.current.y) > 60) registerBounce();
       } else if (pos.current.y < 0) {
         pos.current.y = 0;
         vel.current.y *= -BOUNCE;
       }
 
-      squish.current.x += (1 - squish.current.x) * 0.18;
-      squish.current.y += (1 - squish.current.y) * 0.18;
+      springStep(dt);
       applyTransform(pos.current.x, pos.current.y, squish.current.x, squish.current.y, 1);
 
-      // once it's essentially stopped moving on the floor, remember where
-      // it's resting — this is the "stays where you put it" behavior.
+      // once it's essentially stopped moving, it becomes "placed" — stays
+      // exactly there from now on, same as a gentle manual placement.
       const speed = Math.hypot(vel.current.x, vel.current.y);
       const onFloor = pos.current.y >= maxY - 1;
       if (speed < 15 && onFloor) {
         stillFrames++;
-        if (stillFrames > 30 && !hasSavedRestRef.current) {
-          hasSavedRestRef.current = true;
-          savePosition({ x: pos.current.x, y: pos.current.y });
+        if (stillFrames > 20) {
+          isPlaced.current = true;
+          squish.current = { x: 1, y: 1 };
+          squishVel.current = { x: 0, y: 0 };
+          if (!hasSavedRestRef.current) {
+            hasSavedRestRef.current = true;
+            savePosition({ x: pos.current.x, y: pos.current.y });
+          }
         }
       } else {
         stillFrames = 0;
@@ -247,11 +292,14 @@ export function FloatingMilo() {
     e.preventDefault();
     (e.target as Element).setPointerCapture(e.pointerId);
     isDragging.current = true;
+    isPlaced.current = false;
     isFlyingOff.current = false;
     movedDistance.current = 0;
     hasSavedRestRef.current = false;
     dragTarget.current = { x: pos.current.x, y: pos.current.y };
-    lastPointer.current = { x: e.clientX, y: e.clientY, t: performance.now() };
+    const now = performance.now();
+    lastPointer.current = { x: e.clientX, y: e.clientY, t: now };
+    pointerHistory.current = [{ x: e.clientX, y: e.clientY, t: now }];
     setExpression('dragged');
     if (reappearTimer.current) clearTimeout(reappearTimer.current);
   };
@@ -264,12 +312,14 @@ export function FloatingMilo() {
     dragTarget.current = { x: dragTarget.current.x + dx, y: dragTarget.current.y + dy };
 
     const now = performance.now();
-    const dt = Math.max(now - lastPointer.current.t, 1) / 1000;
-    vel.current = {
-      x: Math.max(-2800, Math.min(2800, (dx / dt) * 0.9)),
-      y: Math.max(-2800, Math.min(2800, (dy / dt) * 0.9)),
-    };
     lastPointer.current = { x: e.clientX, y: e.clientY, t: now };
+
+    // keep a short rolling window of recent samples — release velocity is
+    // computed from this window, not frame-to-frame deltas, so a single
+    // noisy high-polling-rate sample can't spike the "throw" speed and
+    // accidentally trigger a hard throw/fly-off from a small nudge.
+    pointerHistory.current.push({ x: e.clientX, y: e.clientY, t: now });
+    pointerHistory.current = pointerHistory.current.filter((s) => now - s.t < 100);
   };
 
   const handlePointerUp = () => {
@@ -278,12 +328,39 @@ export function FloatingMilo() {
     setExpression('idle');
 
     if (movedDistance.current < 6) {
+      isPlaced.current = true;
       setPanel((p) => (p === 'none' ? 'menu' : 'none'));
       return;
     }
 
+    // smoothed release velocity from the recent sample window
+    const hist = pointerHistory.current;
+    const oldest = hist[0];
+    const newest = hist[hist.length - 1] ?? oldest;
+    const dt = Math.max((newest?.t ?? 0) - (oldest?.t ?? 0), 16) / 1000;
+    const releaseVel = oldest && newest
+      ? {
+          x: Math.max(-2600, Math.min(2600, ((newest.x - oldest.x) / dt) * 0.9)),
+          y: Math.max(-2600, Math.min(2600, ((newest.y - oldest.y) / dt) * 0.9)),
+        }
+      : { x: 0, y: 0 };
+    vel.current = releaseVel;
+
+    const speed = Math.hypot(releaseVel.x, releaseVel.y);
+
+    if (speed < PLACEMENT_SPEED) {
+      // gentle release — stick exactly here, anywhere on screen, no bounce.
+      isPlaced.current = true;
+      squish.current = { x: 1.12, y: 0.9 }; // tiny plop on landing
+      squishVel.current = { x: 0, y: 0 };
+      if (!hasSavedRestRef.current) {
+        hasSavedRestRef.current = true;
+        savePosition({ x: pos.current.x, y: pos.current.y });
+      }
+      return;
+    }
+
     bumpStat('throws');
-    const speed = Math.hypot(vel.current.x, vel.current.y);
     if (speed > SUPER_THROW_SPEED) {
       triggerOffscreenFling();
     } else if (Math.random() < 0.55) {
