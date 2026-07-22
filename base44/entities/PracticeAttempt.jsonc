@@ -1,0 +1,21 @@
+{
+  "name": "PracticeAttempt",
+  "type": "object",
+  "properties": {
+    "bank_question_id": {
+      "type": "string",
+      "description": "The BankQuestion that was attempted"
+    },
+    "correct": {
+      "type": "boolean",
+      "default": false
+    },
+    "selected_index": {
+      "type": "number",
+      "description": "The option index the user selected"
+    }
+  },
+  "required": [
+    "bank_question_id"
+  ]
+}

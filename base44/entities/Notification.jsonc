@@ -1,0 +1,35 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "response_received",
+        "request_claimed",
+        "response_rejected",
+        "system"
+      ],
+      "default": "system"
+    },
+    "read_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

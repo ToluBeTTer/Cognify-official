@@ -1,0 +1,94 @@
+{
+  "name": "BankQuestion",
+  "type": "object",
+  "properties": {
+    "prompt": {
+      "type": "string",
+      "description": "The question prompt"
+    },
+    "passage": {
+      "type": "string",
+      "description": "Optional reading passage or context"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Multiple choice options"
+    },
+    "correct_index": {
+      "type": "number",
+      "description": "Index of the correct option"
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "Math",
+        "Reading",
+        "Writing",
+        "Grammar",
+        "Vocabulary",
+        "Algebra",
+        "Geometry",
+        "Statistics",
+        "Advanced Math",
+        "Problem Solving"
+      ],
+      "default": "Math"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert",
+        "Challenge"
+      ],
+      "default": "Medium"
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "Multiple Choice",
+        "Grid-In",
+        "Passage-Based",
+        "Chart/Graph Analysis",
+        "Data Interpretation",
+        "Word Problem"
+      ],
+      "default": "Multiple Choice"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "staff-created",
+        "ai-generated",
+        "community-submitted",
+        "promoted",
+        "imported"
+      ],
+      "default": "staff-created"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "in_review",
+        "published",
+        "archived"
+      ],
+      "default": "published"
+    }
+  },
+  "required": [
+    "prompt"
+  ]
+}

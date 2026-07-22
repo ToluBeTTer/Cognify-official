@@ -1,0 +1,41 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "student",
+        "creator",
+        "admin"
+      ],
+      "default": "student",
+      "description": "Platform role"
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "free",
+        "plus"
+      ],
+      "default": "free",
+      "description": "Subscription tier"
+    },
+    "onboarding_status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "active"
+      ],
+      "default": "new"
+    },
+    "current_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "best_streak": {
+      "type": "number",
+      "default": 0
+    }
+  }
+}

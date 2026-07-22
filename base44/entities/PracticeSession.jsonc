@@ -1,0 +1,41 @@
+{
+  "name": "PracticeSession",
+  "type": "object",
+  "properties": {
+    "session_type": {
+      "type": "string",
+      "enum": [
+        "Quick Practice",
+        "Timed Practice",
+        "Adaptive Practice",
+        "Weakness Mode",
+        "Mixed Mode",
+        "Streak Mode",
+        "Challenge Mode",
+        "Daily Challenge",
+        "Review Mode",
+        "Endless Practice"
+      ],
+      "default": "Quick Practice"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "total_questions": {
+      "type": "number",
+      "default": 0
+    },
+    "correct_answers": {
+      "type": "number",
+      "default": 0
+    },
+    "duration_seconds": {
+      "type": "number",
+      "default": 0
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

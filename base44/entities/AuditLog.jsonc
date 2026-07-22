@@ -1,0 +1,31 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "description": "What action was taken (e.g. creator_approved, role_changed)"
+    },
+    "actor_id": {
+      "type": "string",
+      "description": "User who performed the action"
+    },
+    "actor_name": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string",
+      "description": "Entity type affected"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string",
+      "description": "Human-readable summary"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "TutorApplication",
+  "type": "object",
+  "properties": {
+    "applicant_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "subjects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "experience": {
+      "type": "string",
+      "description": "Teaching/tutoring background"
+    },
+    "sample_response": {
+      "type": "string",
+      "description": "Sample answer to a test question"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "denied"
+      ],
+      "default": "pending"
+    },
+    "admin_notes": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "Applicant user ID for role promotion"
+    }
+  },
+  "required": [
+    "applicant_name",
+    "email",
+    "subjects"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "name": "MascotProfile",
+  "type": "object",
+  "properties": {
+    "credits": {
+      "type": "number",
+      "default": 0,
+      "description": "Spendable Cogs (in-game currency)"
+    },
+    "total_earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Lifetime Cogs earned (for leaderboard)"
+    },
+    "streak_days": {
+      "type": "number",
+      "default": 0
+    },
+    "last_login_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "mascot_config": {
+      "type": "object",
+      "description": "Customization state \u2014 colors, features, and placed accessories with x/y offsets",
+      "properties": {
+        "base_color": {
+          "type": "string"
+        },
+        "eye_style": {
+          "type": "string"
+        },
+        "mouth_style": {
+          "type": "string"
+        },
+        "hat": {
+          "type": "string"
+        },
+        "clothing": {
+          "type": "string"
+        },
+        "placed_items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "scale": {
+                "type": "number"
+              },
+              "rotation": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "owned_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of cosmetics the user owns"
+    },
+    "equipped_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": []
+}

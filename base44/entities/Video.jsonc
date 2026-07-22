@@ -1,0 +1,76 @@
+{
+  "name": "Video",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Searchable keywords (subject, topic, question type, etc.)"
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "Math",
+        "Reading",
+        "Writing"
+      ],
+      "default": "Math"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ],
+      "default": "Medium"
+    },
+    "question_type": {
+      "type": "string"
+    },
+    "creator_id": {
+      "type": "string"
+    },
+    "creator_name": {
+      "type": "string"
+    },
+    "views": {
+      "type": "number",
+      "default": 0
+    },
+    "source_question_id": {
+      "type": "string",
+      "description": "The original Question this video was created from (optional)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "published",
+        "unlisted",
+        "draft"
+      ],
+      "default": "published"
+    }
+  },
+  "required": [
+    "title",
+    "video_url"
+  ]
+}

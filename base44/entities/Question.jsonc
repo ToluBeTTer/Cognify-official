@@ -1,0 +1,116 @@
+{
+  "name": "Question",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "The question text the student is stuck on"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Optional uploaded screenshot"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "Math",
+        "Reading",
+        "Writing"
+      ],
+      "default": "Math"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "default": "Medium"
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "Multiple Choice",
+        "Grid-In",
+        "Passage-Based",
+        "Chart/Graph Analysis",
+        "Data Interpretation",
+        "Word Problem"
+      ],
+      "default": "Multiple Choice"
+    },
+    "milo_response_type": {
+      "type": "string",
+      "enum": [
+        "Quick Hint",
+        "Full Explanation",
+        "Simplified Explanation",
+        "SAT Strategy Tip"
+      ]
+    },
+    "milo_response": {
+      "type": "string",
+      "description": "AI (Milo) response text"
+    },
+    "milo_confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ai_answered",
+        "new",
+        "in_progress",
+        "waiting",
+        "answered",
+        "resolved",
+        "archived",
+        "rejected"
+      ],
+      "default": "ai_answered",
+      "description": "Lifecycle status"
+    },
+    "escalated": {
+      "type": "boolean",
+      "default": false
+    },
+    "tutor_id": {
+      "type": "string"
+    },
+    "tutor_response": {
+      "type": "string"
+    },
+    "tutor_response_image": {
+      "type": "string"
+    },
+    "tutor_response_video": {
+      "type": "string",
+      "description": "Optional video explanation URL"
+    },
+    "rejection_reason": {
+      "type": "string",
+      "enum": [
+        "out of scope",
+        "insufficient info",
+        "duplicate"
+      ]
+    },
+    "rating": {
+      "type": "number",
+      "description": "Student rating of the human response 1-5"
+    }
+  },
+  "required": [
+    "text"
+  ]
+}

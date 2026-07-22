@@ -1,0 +1,91 @@
+{
+  "name": "HelpRequest",
+  "type": "object",
+  "properties": {
+    "question_text": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "Math",
+        "Reading",
+        "Writing"
+      ],
+      "default": "Math"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "default": "Medium"
+    },
+    "ai_context": {
+      "type": "string",
+      "description": "Milo's draft context for the tutor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "In Progress",
+        "Waiting",
+        "Answered",
+        "Rejected",
+        "Disputed"
+      ],
+      "default": "New"
+    },
+    "tutor_response": {
+      "type": "string"
+    },
+    "tutor_response_image": {
+      "type": "string",
+      "description": "Annotated image / whiteboard markup"
+    },
+    "tutor_id": {
+      "type": "string"
+    },
+    "claimed_date": {
+      "type": "string",
+      "description": "When tutor claimed \u2014 for SLA/aging"
+    },
+    "rejection_reason": {
+      "type": "string",
+      "enum": [
+        "",
+        "out of scope",
+        "insufficient info",
+        "duplicate"
+      ],
+      "default": ""
+    },
+    "rating": {
+      "type": "number",
+      "description": "1-5 star rating from student"
+    },
+    "dispute_reason": {
+      "type": "string",
+      "description": "Student appeal reason if response unhelpful"
+    },
+    "dispute_status": {
+      "type": "string",
+      "enum": [
+        "none",
+        "open",
+        "resolved"
+      ],
+      "default": "none"
+    }
+  },
+  "required": [
+    "question_text"
+  ]
+}

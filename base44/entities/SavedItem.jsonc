@@ -1,0 +1,31 @@
+{
+  "name": "SavedItem",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "ai_explanation",
+        "human_explanation",
+        "note",
+        "bookmark"
+      ],
+      "default": "ai_explanation"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "source_question_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
